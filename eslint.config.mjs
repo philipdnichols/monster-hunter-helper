@@ -12,6 +12,9 @@ export default [
   pluginReact.configs.flat['jsx-runtime'],
   eslintPluginPrettierRecommended,
   {
+    ignores: ['.git', '.idea', 'build', 'node_modules'],
+  },
+  {
     settings: {
       react: {
         version: 'detect',
