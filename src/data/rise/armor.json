@@ -1,0 +1,774 @@
+{
+  "KAMURA_LR": {
+    "names": ["Kamura"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Kamura Head Scarf"],
+      "description": "Signature Kamura headwear. All village defenders sport this dark blue attire.",
+      "rarityRef": "RARITY_1",
+      "defense": 1,
+      "slots": [],
+      "fireResistance": 1,
+      "waterResistance": 0,
+      "thunderResistance": 0,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "DIVINE_BLESSING"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Kamura Garb"],
+      "description": "A Kamura staple. Comes with shuriken to show off to your friends!",
+      "rarityRef": "RARITY_1",
+      "defense": 1,
+      "slots": [],
+      "fireResistance": 1,
+      "waterResistance": 0,
+      "thunderResistance": 0,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "WIREBUG_WHISPERER"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Kamura Braces"],
+      "description": "Signature Kamura armguards. Bound with red cord, they're very lightweight.",
+      "rarityRef": "RARITY_1",
+      "defense": 1,
+      "slots": [],
+      "fireResistance": 1,
+      "waterResistance": 0,
+      "thunderResistance": 0,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "HEROICS"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Kamura Obi"],
+      "description": "A sash that can conceal all manner of hunting tools via a no-nonsense design.",
+      "rarityRef": "RARITY_1",
+      "defense": 1,
+      "slots": [],
+      "fireResistance": 1,
+      "waterResistance": 0,
+      "thunderResistance": 0,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CRITICAL_EYE"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Kamura Leggings"],
+      "description": "Leg armor that fits the user like a glove...for the foot. Made of local materials.",
+      "rarityRef": "RARITY_1",
+      "defense": 1,
+      "slots": [],
+      "fireResistance": 1,
+      "waterResistance": 0,
+      "thunderResistance": 0,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "WALL_RUNNER"
+        }
+      ]
+    }
+  },
+  "HUNTER_LR": {
+    "names": ["Hunter"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Hunter's Helm"],
+      "description": "Head armor made to hunt in. Firm yet flexible; a hunter favorite.",
+      "rarityRef": "RARITY_1",
+      "defense": 4,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "thunderResistance": 0,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "ITEM_PROLONGER"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Hunter's Mail"],
+      "description": "Chest armor made especially for hunters. Common gear worn by many.",
+      "rarityRef": "RARITY_1",
+      "defense": 4,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "thunderResistance": 0,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "ATTACK_BOOST"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Hunter's Vambraces"],
+      "description": "Arm gear made for hunters. Sturdy, yet still extremely maneuverable.",
+      "rarityRef": "RARITY_1",
+      "defense": 4,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "thunderResistance": 0,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "QUICK_SHEATHE"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Hunter's Coil"],
+      "description": "Waist armor made especially for hunters. Pliant yet durable.",
+      "rarityRef": "RARITY_1",
+      "defense": 4,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "thunderResistance": 0,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "STUN_RESISTANCE"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Hunter's Greaves"],
+      "description": "Leg armor made especially for hunters. Stout equipment made for maneuverability.",
+      "rarityRef": "RARITY_1",
+      "defense": 4,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "thunderResistance": 0,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "STUN_RESISTANCE"
+        },
+        {
+          "level": 1,
+          "skillRef": "ATTACK_BOOST"
+        }
+      ]
+    }
+  },
+  "LEATHER_LR": {
+    "names": ["Leather"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Leather Headgear"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 1,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "thunderResistance": 0,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "HUNGER_RESISTANCE"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Leather Vest"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 1,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "thunderResistance": 0,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "BOTANIST"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Leather Gloves"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 1,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "thunderResistance": 0,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "GEOLOGIST"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Leather Belt"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 1,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "thunderResistance": 0,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "RECOVERY_UP"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Leather Pants"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 1,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "thunderResistance": 0,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "GEOLOGIST"
+        }
+      ]
+    }
+  },
+  "CHAINMAIL_LR": {
+    "names": ["Chainmail"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Chainmail Headgear"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 4,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "thunderResistance": 1,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "BOTANIST"
+        },
+        {
+          "level": 1,
+          "skillRef": "DEFENSE_BOOST"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Chainmail Vest"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 4,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "thunderResistance": 1,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "PEAK_PERFORMANCE"
+        },
+        {
+          "level": 1,
+          "skillRef": "DEFENSE_BOOST"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Chainmail Gloves"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 4,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "thunderResistance": 1,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "BOTANIST"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Chainmail Belt"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 4,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "thunderResistance": 1,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "GUARD"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Chainmail Pants"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 4,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "thunderResistance": 1,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "STAMINA_SURGE"
+        }
+      ]
+    }
+  },
+  "IZUCHI_LR": {
+    "names": ["Izuchi"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Izuchi Helm"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": 2,
+      "waterResistance": -1,
+      "thunderResistance": -2,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CRITICAL_EYE"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Izuchi Mail"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": 2,
+      "waterResistance": -1,
+      "thunderResistance": -2,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CRITICAL_EYE"
+        },
+        {
+          "level": 1,
+          "skillRef": "RECOVERY_SPEED"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Izuchi Braces"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": 2,
+      "waterResistance": -1,
+      "thunderResistance": -2,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CONSTITUTION"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Izuchi Coil"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": 2,
+      "waterResistance": -1,
+      "thunderResistance": -2,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CRITICAL_EYE"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Izuchi Greaves"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": 2,
+      "waterResistance": -1,
+      "thunderResistance": -2,
+      "iceResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "RECOVERY_SPEED"
+        }
+      ]
+    }
+  },
+  "BAGGI_LR": {
+    "names": ["Baggi"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Baggi Helm"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -4,
+      "waterResistance": -1,
+      "iceResistance": 2,
+      "thunderResistance": -1,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "ICE_ATTACK"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Baggi Mail"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -4,
+      "waterResistance": -1,
+      "iceResistance": 2,
+      "thunderResistance": -1,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "ATTACK_BOOST"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Baggi Vambraces"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -4,
+      "waterResistance": -1,
+      "iceResistance": 2,
+      "thunderResistance": -1,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "SLEEP_RESISTANCE"
+        },
+        {
+          "level": 1,
+          "skillRef": "ICE_ATTACK"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Baggi Coil"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -4,
+      "waterResistance": -1,
+      "iceResistance": 2,
+      "thunderResistance": -1,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "SLEEP_RESISTANCE"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Baggi Greaves"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -4,
+      "waterResistance": -1,
+      "iceResistance": 2,
+      "thunderResistance": -1,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "ATTACK_BOOST"
+        }
+      ]
+    }
+  },
+  "ARZUROS_LR": {
+    "names": ["Arzuros"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Arzuros Helm"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -2,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": -2,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "FORTIFY"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Arzuros Mail"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -2,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": -2,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "COUNTERSTRIKE"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Arzuros Vambraces"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -2,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": -2,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "DEFENSE_BOOST"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Arzuros Coil"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -2,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": -2,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "DEFENSE_BOOST"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Arzuros Greaves"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -2,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": -2,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "DIVERSION"
+        }
+      ]
+    }
+  },
+  "LAGOMBI_LR": {
+    "names": ["Lagombi"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Lagombi Helm"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -3,
+      "waterResistance": 1,
+      "iceResistance": 4,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CRITICAL_EYE"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Lagombi Mail"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -3,
+      "waterResistance": 1,
+      "iceResistance": 4,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "AFFINITY_SLIDING"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Lagombi Vambraces"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -3,
+      "waterResistance": 1,
+      "iceResistance": 4,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "ICE_ATTACK"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Lagombi Coil"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -3,
+      "waterResistance": 1,
+      "iceResistance": 4,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CONSTITUTION"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Lagombi Greaves"],
+      "description": "TODO",
+      "rarityRef": "RARITY_1",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -3,
+      "waterResistance": 1,
+      "iceResistance": 4,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CRITICAL_EYE"
+        }
+      ]
+    }
+  }
+}

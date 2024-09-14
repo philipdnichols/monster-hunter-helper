@@ -1,0 +1,96 @@
+{
+  "TODO": {
+    "names": ["TODO"],
+    "rankRef": "_RANK",
+    "helm": {
+      "names": ["TODO"],
+      "description": "TODO",
+      "rarityRef": "RARITY_",
+      "defense": 0,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "TODO"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["TODO"],
+      "description": "TODO",
+      "rarityRef": "RARITY_",
+      "defense": 0,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "TODO"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["TODO"],
+      "description": "TODO",
+      "rarityRef": "RARITY_",
+      "defense": 0,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "TODO"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["TODO"],
+      "description": "TODO",
+      "rarityRef": "RARITY_",
+      "defense": 0,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "TODO"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["TODO"],
+      "description": "TODO",
+      "rarityRef": "RARITY_",
+      "defense": 0,
+      "slots": [],
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "TODO"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,512 @@
+{
+  "DIVINE_BLESSING": {
+    "name": "Divine Blessing",
+    "description": "Has a predetermined chance of reducing the damage you take.",
+    "levels": [
+      {
+        "level": 1,
+        "description": "While active, reduced damage taken by 15%"
+      },
+      {
+        "level": 2,
+        "description": "While active, reduced damage taken by 30%"
+      },
+      {
+        "level": 3,
+        "description": "While active, reduced damage taken by 50%"
+      }
+    ]
+  },
+  "WIREBUG_WHISPERER": {
+    "name": "Wirebug Whisperer",
+    "description": "Improves your handling of Wirebugs",
+    "levels": [
+      {
+        "level": 1,
+        "description": "Extends the duration you can keep a Wirebug by 30%"
+      },
+      {
+        "level": 2,
+        "description": "Also increases Wirefall recovery rate"
+      },
+      {
+        "level": 3,
+        "description": "Also increases passive recovery rate while on the ground."
+      }
+    ]
+  },
+  "HEROICS": {
+    "name": "Heroics",
+    "description": "Increases attack power and defense when health drops to 35% or lower.",
+    "levels": [
+      {
+        "level": 1,
+        "description": "While active, increases defense by 50 points."
+      },
+      {
+        "level": 2,
+        "description": "Attack +5% and defense +50 while active."
+      },
+      {
+        "level": 3,
+        "description": "Attack +5% and defense +100 while active."
+      },
+      {
+        "level": 4,
+        "description": "Attack +10% and defense +100 while active."
+      },
+      {
+        "level": 5,
+        "description": "While active, attack power +30% and defense-increasing effects are negated."
+      }
+    ]
+  },
+  "CRITICAL_EYE": {
+    "name": "Critical Eye",
+    "description": "Increases affinity.",
+    "levels": [
+      {
+        "level": 1,
+        "description": "Affinity +5%"
+      },
+      {
+        "level": 2,
+        "description": "Affinity +10%"
+      },
+      {
+        "level": 3,
+        "description": "Affinity +15%"
+      },
+      {
+        "level": 4,
+        "description": "Affinity +20%"
+      },
+      {
+        "level": 5,
+        "description": "Affinity +25%"
+      },
+      {
+        "level": 6,
+        "description": "Affinity +30%"
+      },
+      {
+        "level": 7,
+        "description": "Affinity +40%"
+      }
+    ]
+  },
+  "WALL_RUNNER": {
+    "name": "Wall Runner",
+    "description": "Reduces stamina consumption when running on walls.",
+    "levels": [
+      {
+        "level": 1,
+        "description": "Reduces stamina consumption by 25% while wall running."
+      },
+      {
+        "level": 2,
+        "description": "Reduces stamina consumption by 50% while wall running."
+      },
+      {
+        "level": 3,
+        "description": "Also temporarily increases attack power by wall running."
+      }
+    ]
+  },
+  "ITEM_PROLONGER": {
+    "name": "Item Prolonger",
+    "description": "Extends the duration of some item effects.",
+    "levels": [
+      {
+        "level": 1,
+        "description": "Item effect duration +10%"
+      },
+      {
+        "level": 2,
+        "description": "Item effect duration +25%"
+      },
+      {
+        "level": 3,
+        "description": "Item effect duration +50%"
+      }
+    ]
+  },
+  "ATTACK_BOOST": {
+    "name": "Attack Boost",
+    "description": "Increases attack power.",
+    "levels": [
+      {
+        "level": 1,
+        "description": "Attack +3"
+      },
+      {
+        "level": 2,
+        "description": "Attack +6"
+      },
+      {
+        "level": 3,
+        "description": "Attack +9"
+      },
+      {
+        "level": 4,
+        "description": "Attack +5% Bonus: +7"
+      },
+      {
+        "level": 5,
+        "description": "Attack +6% Bonus: +8"
+      },
+      {
+        "level": 6,
+        "description": "Attack +8% Bonus: +9"
+      },
+      {
+        "level": 7,
+        "description": "Attack +10% Bonus: +10"
+      }
+    ]
+  },
+  "QUICK_SHEATHE": {
+    "name": "Quick Sheathe",
+    "description": "Speeds up weapon sheathing.",
+    "levels": [
+      {
+        "level": 1,
+        "description": "Slightly increases sheathing speed."
+      },
+      {
+        "level": 2,
+        "description": "Moderately increases sheathing speed."
+      },
+      {
+        "level": 3,
+        "description": "Greatly increases sheathing speed."
+      }
+    ]
+  },
+  "STUN_RESISTANCE": {
+    "name": "Stun Resistance",
+    "description": "Reduces stun duration.",
+    "levels": [
+      {
+        "level": 1,
+        "description": "Reduces the duration of stun by 60%."
+      },
+      {
+        "level": 2,
+        "description": "Reduces the duration of stun by 90%."
+      },
+      {
+        "level": 3,
+        "description": "Prevents stun."
+      }
+    ]
+  },
+  "HUNGER_RESISTANCE": {
+    "name": "Hunger Resistance",
+    "description": "Reduces maximum stamina depletion over time.",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "BOTANIST": {
+    "name": "Botanist",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      },
+      {
+        "level": 4,
+        "description": "TODO"
+      }
+    ]
+  },
+  "GEOLOGIST": {
+    "name": "Geologist",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "RECOVERY_UP": {
+    "name": "Recovery Up",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "DEFENSE_BOOST": {
+    "name": "Defense Boost",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      },
+      {
+        "level": 4,
+        "description": "TODO"
+      },
+      {
+        "level": 5,
+        "description": "TODO"
+      },
+      {
+        "level": 6,
+        "description": "TODO"
+      },
+      {
+        "level": 7,
+        "description": "TODO"
+      }
+    ]
+  },
+  "PEAK_PERFORMANCE": {
+    "name": "Peak Performance",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "GUARD": {
+    "name": "Guard",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      },
+      {
+        "level": 4,
+        "description": "TODO"
+      },
+      {
+        "level": 5,
+        "description": "TODO"
+      }
+    ]
+  },
+  "STAMINA_SURGE": {
+    "name": "Stamina Surge",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "RECOVERY_SPEED": {
+    "name": "Recovery Speed",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "CONSTITUTION": {
+    "name": "Constitution",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      },
+      {
+        "level": 4,
+        "description": "TODO"
+      },
+      {
+        "level": 5,
+        "description": "TODO"
+      }
+    ]
+  },
+  "ICE_ATTACK": {
+    "name": "Ice Attack",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      },
+      {
+        "level": 4,
+        "description": "TODO"
+      },
+      {
+        "level": 5,
+        "description": "TODO"
+      }
+    ]
+  },
+  "SLEEP_RESISTANCE": {
+    "name": "Sleep Resistance",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "FORTIFY": {
+    "name": "Fortify",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      }
+    ]
+  },
+  "COUNTERSTRIKE": {
+    "name": "Counterstrike",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "DIVERSION": {
+    "name": "Diversion",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      }
+    ]
+  },
+  "AFFINITY_SLIDING": {
+    "name": "Affinity Sliding",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      }
+    ]
+  }
+}
