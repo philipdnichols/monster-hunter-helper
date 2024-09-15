@@ -770,5 +770,3018 @@
         }
       ]
     }
+  },
+  "ALLOY_LR": {
+    "names": ["Alloy"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Alloy Helm"],
+      "description": "TODO",
+      "rarityRef": "RARITY_2",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -1,
+      "waterResistance": 0,
+      "iceResistance": -1,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "WATER_ATTACK"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Alloy Mail"],
+      "description": "TODO",
+      "rarityRef": "RARITY_2",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -1,
+      "waterResistance": 0,
+      "iceResistance": -1,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "SPEED_SHARPENING"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Alloy Vambraces"],
+      "description": "TODO",
+      "rarityRef": "RARITY_2",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -1,
+      "waterResistance": 0,
+      "iceResistance": -1,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CRITICAL_EYE"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Alloy Coil"],
+      "description": "TODO",
+      "rarityRef": "RARITY_2",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -1,
+      "waterResistance": 0,
+      "iceResistance": -1,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "WATER_ATTACK"
+        },
+        {
+          "level": 1,
+          "skillRef": "CRITICAL_EYE"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Alloy Greaves"],
+      "description": "TODO",
+      "rarityRef": "RARITY_2",
+      "defense": 10,
+      "slots": [],
+      "fireResistance": -1,
+      "waterResistance": 0,
+      "iceResistance": -1,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "SPEED_SHARPENING"
+        }
+      ]
+    }
+  },
+  "INGOT_LR": {
+    "names": ["Ingot"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Ingot Helm"],
+      "description": "TODO",
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "slots": [],
+      "fireResistance": -1,
+      "waterResistance": -1,
+      "iceResistance": 0,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "WINDPROOF"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Ingot Mail"],
+      "description": "TODO",
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "slots": [],
+      "fireResistance": -1,
+      "waterResistance": -1,
+      "iceResistance": 0,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "WINDPROOF"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Ingot Vambraces"],
+      "description": "TODO",
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "slots": [],
+      "fireResistance": -1,
+      "waterResistance": -1,
+      "iceResistance": 0,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "THUNDER_ATTACK"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Ingot Coil"],
+      "description": "TODO",
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "slots": [],
+      "fireResistance": -1,
+      "waterResistance": -1,
+      "iceResistance": 0,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "POWER_PROLONGER"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Ingot Greaves"],
+      "description": "TODO",
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "slots": [],
+      "fireResistance": -1,
+      "waterResistance": -1,
+      "iceResistance": 0,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "ATTACK_BOOST"
+        },
+        {
+          "level": 1,
+          "skillRef": "CRITICAL_EYE"
+        }
+      ]
+    }
+  },
+  "MELAHOA_LR": {
+    "names": ["Melahoa"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Melahoa Hat"],
+      "description": "TODO",
+      "rarityRef": "RARITY_2",
+      "slots": [],
+      "defense": 18,
+      "fireResistance": 0,
+      "waterResistance": 1,
+      "iceResistance": 0,
+      "thunderResistance": 3,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "PARALYSIS_RESISTANCE"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Melahoa Jacket"],
+      "description": "TODO",
+      "rarityRef": "RARITY_2",
+      "slots": [],
+      "defense": 18,
+      "fireResistance": 0,
+      "waterResistance": 1,
+      "iceResistance": 0,
+      "thunderResistance": 3,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "BOTANIST"
+        },
+        {
+          "level": 1,
+          "skillRef": "RECOVERY_UP"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Melahoa Branch"],
+      "description": "TODO",
+      "rarityRef": "RARITY_2",
+      "slots": [],
+      "defense": 18,
+      "fireResistance": 0,
+      "waterResistance": 1,
+      "iceResistance": 0,
+      "thunderResistance": 3,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "PARALYSIS_RESISTANCE"
+        },
+        {
+          "level": 1,
+          "skillRef": "RECOVERY_UP"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Melahoa Folia"],
+      "description": "TODO",
+      "rarityRef": "RARITY_2",
+      "slots": [],
+      "defense": 18,
+      "fireResistance": 0,
+      "waterResistance": 1,
+      "iceResistance": 0,
+      "thunderResistance": 3,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "BOTANIST"
+        },
+        {
+          "level": 1,
+          "skillRef": "RECOVERY_SPEED"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Melahoa Roots"],
+      "description": "TODO",
+      "rarityRef": "RARITY_2",
+      "slots": [],
+      "defense": 18,
+      "fireResistance": 0,
+      "waterResistance": 1,
+      "iceResistance": 0,
+      "thunderResistance": 3,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 2,
+          "skillRef": "RECOVERY_SPEED"
+        }
+      ]
+    }
+  },
+  "DEATH_STENCH_LR": {
+    "names": ["Death Stench"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Death Stench Brain"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": 3,
+      "waterResistance": 1,
+      "iceResistance": -1,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 2,
+          "skillRef": "DRAGON_RESISTANCE"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Death Stench Muscle"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": 3,
+      "waterResistance": 1,
+      "iceResistance": -1,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "RAPID_MORPH"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Death Stench Grip"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": 3,
+      "waterResistance": 1,
+      "iceResistance": -1,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "MAXIMUM_MIGHT"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Death Stench Bowels"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": 3,
+      "waterResistance": 1,
+      "iceResistance": -1,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "DRAGON_RESISTANCE"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Death Stench Heel"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": 3,
+      "waterResistance": 1,
+      "iceResistance": -1,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "RAPID_MORPH"
+        }
+      ]
+    }
+  },
+  "MOSGHARL_LR": {
+    "names": ["Mosgharl"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Mosgharl Vizor"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -3,
+      "waterResistance": 1,
+      "iceResistance": 3,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "BLAST_RESISTANCE"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Mosgharl Ribplate"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -3,
+      "waterResistance": 1,
+      "iceResistance": 3,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 2,
+          "skillRef": "RELOAD_SPEED"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Mosgharl Creeper"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -3,
+      "waterResistance": 1,
+      "iceResistance": 3,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "BLAST_RESISTANCE"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Mosgharl Folia"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -3,
+      "waterResistance": 1,
+      "iceResistance": 3,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 2,
+          "skillRef": "FIRE_ATTACK"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Mosgharl Roots"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -3,
+      "waterResistance": 1,
+      "iceResistance": 3,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 2,
+          "skillRef": "RECOIL_DOWN"
+        }
+      ]
+    }
+  },
+  "VAIK_LR": {
+    "names": ["Vaik"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Vaik Helm"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": 0,
+      "waterResistance": 3,
+      "iceResistance": -1,
+      "thunderResistance": -2,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "AMMO_UP"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Vaik Mail"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": 0,
+      "waterResistance": 3,
+      "iceResistance": -1,
+      "thunderResistance": -2,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "STEADINESS"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Vaik Braces"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": 0,
+      "waterResistance": 3,
+      "iceResistance": -1,
+      "thunderResistance": -2,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "NORMAL_RAPID_UP"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Vaik Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": 0,
+      "waterResistance": 3,
+      "iceResistance": -1,
+      "thunderResistance": -2,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "STEADINESS"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Vaik Greaves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": 0,
+      "waterResistance": 3,
+      "iceResistance": -1,
+      "thunderResistance": -2,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "AMMO_UP"
+        }
+      ]
+    }
+  },
+  "CHAOS_LR": {
+    "names": ["Chaos"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Chaoshroom"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 12,
+      "fireResistance": 2,
+      "waterResistance": -2,
+      "iceResistance": 0,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "MUSHROOMANCER"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Chaos Plate"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 12,
+      "fireResistance": 2,
+      "waterResistance": -2,
+      "iceResistance": 0,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": []
+    },
+    "gloves": null,
+    "waist": null,
+    "legs": null
+  },
+  "EDEL_LR": {
+    "names": ["Edel"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Edel Vizor"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 12,
+      "fireResistance": -1,
+      "waterResistance": 3,
+      "iceResistance": 0,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "POISON_RESISTANCE"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Edel Ribplate"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 12,
+      "fireResistance": -1,
+      "waterResistance": 3,
+      "iceResistance": 0,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "RECOVERY_UP"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Edel Creeper"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 12,
+      "fireResistance": -1,
+      "waterResistance": 3,
+      "iceResistance": 0,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "POISON_RESISTANCE"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Edel Folia"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 12,
+      "fireResistance": -1,
+      "waterResistance": 3,
+      "iceResistance": 0,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "THUNDER_RESISTANCE"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Edel Roots"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 12,
+      "fireResistance": -1,
+      "waterResistance": 3,
+      "iceResistance": 0,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "THUNDER_RESISTANCE"
+        }
+      ]
+    }
+  },
+  "SKALDA_SPIO_LR": {
+    "names": ["Skalda", "Spio"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Skalda Vertex", "Spio Vertex"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 12,
+      "fireResistance": 3,
+      "waterResistance": -1,
+      "iceResistance": -1,
+      "thunderResistance": -1,
+      "dragonResistance": 3,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "POISON_ATTACK"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Skalda Thorax", "Spio Thorax"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 12,
+      "fireResistance": 3,
+      "waterResistance": -1,
+      "iceResistance": -1,
+      "thunderResistance": -1,
+      "dragonResistance": 3,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CRITICAL_EYE"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Skalda Brachia", "Spio Brachia"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 12,
+      "fireResistance": 3,
+      "waterResistance": -1,
+      "iceResistance": -1,
+      "thunderResistance": -1,
+      "dragonResistance": 3,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "POISON_RESISTANCE"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Skalda Elytra", "Spio Elytra"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 12,
+      "fireResistance": 3,
+      "waterResistance": -1,
+      "iceResistance": -1,
+      "thunderResistance": -1,
+      "dragonResistance": 3,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CRITICAL_EYE"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Skalda Crura", "Spio Crura"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 12,
+      "fireResistance": 3,
+      "waterResistance": -1,
+      "iceResistance": -1,
+      "thunderResistance": -1,
+      "dragonResistance": 3,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "POISON_RESISTANCE"
+        }
+      ]
+    }
+  },
+  "S_STUDDED_LR": {
+    "names": ["S. Studded"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["S. Studded Hat"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 12,
+      "fireResistance": 0,
+      "waterResistance": 2,
+      "iceResistance": -1,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "WATER_RESISTANCE"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["S. Studded Vest"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 12,
+      "fireResistance": 0,
+      "waterResistance": 2,
+      "iceResistance": -1,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "RELOAD_SPEED"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["S. Studded Gloves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 12,
+      "fireResistance": 0,
+      "waterResistance": 2,
+      "iceResistance": -1,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "RECOIL_DOWN"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["S. Studded Sash"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 12,
+      "fireResistance": 0,
+      "waterResistance": 2,
+      "iceResistance": -1,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "BALLISTICS"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["S. Studded Sandals"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 12,
+      "fireResistance": 0,
+      "waterResistance": 2,
+      "iceResistance": -1,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "SPREAD_UP"
+        }
+      ]
+    }
+  },
+  "BISHATEN_LR": {
+    "names": ["Bishaten"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Bishaten Helm"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": -2,
+      "waterResistance": 2,
+      "iceResistance": -4,
+      "thunderResistance": 2,
+      "dragonResistance": 2,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "ITEM_PROLONGER"
+        },
+        {
+          "level": 1,
+          "skillRef": "STUN_RESISTANCE"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Bishaten Mail"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": -2,
+      "waterResistance": 2,
+      "iceResistance": -4,
+      "thunderResistance": 2,
+      "dragonResistance": 2,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "WIDE_RANGE"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Bishaten Vambraces"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": -2,
+      "waterResistance": 2,
+      "iceResistance": -4,
+      "thunderResistance": 2,
+      "dragonResistance": 2,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "STUN_RESISTANCE"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Bishaten Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": -2,
+      "waterResistance": 2,
+      "iceResistance": -4,
+      "thunderResistance": 2,
+      "dragonResistance": 2,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "ITEM_PROLONGER"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Bishaten Greaves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": -2,
+      "waterResistance": 2,
+      "iceResistance": -4,
+      "thunderResistance": 2,
+      "dragonResistance": 2,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "MAXIMUM_MIGHT"
+        }
+      ]
+    }
+  },
+  "AKNOSOM_LR": {
+    "names": ["Aknosom"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Aknosom Helm"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": 3,
+      "waterResistance": -3,
+      "iceResistance": 0,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "FIRE_ATTACK"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Aknosom Mail"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": 3,
+      "waterResistance": -3,
+      "iceResistance": 0,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "QUICK_SHEATHE"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Aknosom Braces"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": 3,
+      "waterResistance": -3,
+      "iceResistance": 0,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "FIRE_ATTACK"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Aknosom Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": 3,
+      "waterResistance": -3,
+      "iceResistance": 0,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "RECOVERY_SPEED"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Aknosom Greaves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": 3,
+      "waterResistance": -3,
+      "iceResistance": 0,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "FIRE_ATTACK"
+        }
+      ]
+    }
+  },
+  "TETRANADON_LR": {
+    "names": ["Tetranadon"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Tetranadon Helm"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -1,
+      "waterResistance": 4,
+      "iceResistance": 1,
+      "thunderResistance": -2,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "SPEED_EATING"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Tetranadon Mail"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -1,
+      "waterResistance": 4,
+      "iceResistance": 1,
+      "thunderResistance": -2,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "NORMAL_RAPID_UP"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Tetranadon Braces"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -1,
+      "waterResistance": 4,
+      "iceResistance": 1,
+      "thunderResistance": -2,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "SPECIAL_AMMO_BOOST"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Tetranadon Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -1,
+      "waterResistance": 4,
+      "iceResistance": 1,
+      "thunderResistance": -2,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "HEROICS"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Tetranadon Greaves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -1,
+      "waterResistance": 4,
+      "iceResistance": 1,
+      "thunderResistance": -2,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "HUNGER_RESISTANCE"
+        }
+      ]
+    }
+  },
+  "SOMNACANTH": {
+    "names": ["Somnacanth"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Somnacanth Helm"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": -1,
+      "waterResistance": 2,
+      "iceResistance": 0,
+      "thunderResistance": -3,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "SLEEP_ATTACK"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Somnacanth Mail"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": -1,
+      "waterResistance": 2,
+      "iceResistance": 0,
+      "thunderResistance": -3,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "ITEM_PROLONGER"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Somnacanth Braces"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": -1,
+      "waterResistance": 2,
+      "iceResistance": 0,
+      "thunderResistance": -3,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "BOMBARDIER"
+        },
+        {
+          "level": 1,
+          "skillRef": "DIVINE_BLESSING"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Somnacanth Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": -1,
+      "waterResistance": 2,
+      "iceResistance": 0,
+      "thunderResistance": -3,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "BOMBARDIER"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Somnacanth Greaves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": -1,
+      "waterResistance": 2,
+      "iceResistance": 0,
+      "thunderResistance": -3,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "DIVINE_BLESSING"
+        }
+      ]
+    }
+  },
+  "GARGWA_LR": {
+    "names": ["Gargwa Mask"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Gargwa Mask"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": -3,
+      "waterResistance": -2,
+      "iceResistance": 1,
+      "thunderResistance": -2,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "LEAP_OF_FAITH"
+        }
+      ]
+    },
+    "chest": null,
+    "gloves": null,
+    "waist": null,
+    "legs": null
+  },
+  "SLAGTOTH_LR": {
+    "names": ["Slagtoth"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Slagtoth Hood"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": -2,
+      "waterResistance": 2,
+      "iceResistance": -1,
+      "thunderResistance": 0,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "FREE_MEAL"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Slagtoth Cloak"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": -2,
+      "waterResistance": 2,
+      "iceResistance": -1,
+      "thunderResistance": 0,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "FREE_MEAL"
+        }
+      ]
+    },
+    "gloves": null,
+    "waist": null,
+    "legs": null
+  },
+  "RHENOPLOS_LR": {
+    "names": ["Rhenoplos"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Rhenoplos Helm"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": 2,
+      "waterResistance": 0,
+      "iceResistance": -2,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "PIERCE_UP"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Rhenoplos Mail"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": 2,
+      "waterResistance": 0,
+      "iceResistance": -2,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "ARTILLERY"
+        },
+        {
+          "level": 1,
+          "skillRef": "STUN_RESISTANCE"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Rhenoplos Braces"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": 2,
+      "waterResistance": 0,
+      "iceResistance": -2,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "ARTILLERY"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Rhenoplos Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": 2,
+      "waterResistance": 0,
+      "iceResistance": -2,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "TREMOR_RESISTANCE"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Rhenoplos Greaves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": 2,
+      "waterResistance": 0,
+      "iceResistance": -2,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "TREMOR_RESISTANCE"
+        }
+      ]
+    }
+  },
+  "JAGGI_LR_1": {
+    "names": ["Jaggi"],
+    "rankRef": "LOW_RANK",
+    "helm": null,
+    "chest": null,
+    "gloves": {
+      "names": ["Jaggi Gauntlets"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "iceResistance": 1,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "ATTACK_BOOST"
+        }
+      ]
+    },
+    "waist": null,
+    "legs": {
+      "names": ["Jaggi Shinguards"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "iceResistance": 1,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "MASTER_MOUNTER"
+        }
+      ]
+    }
+  },
+  "BNAHABRA ": {
+    "names": ["Bnahabra "],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Bnahabra Hat"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": -2,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": 0,
+      "dragonResistance": 2,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "RECOIL_DOWN"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Bnahabra Suit"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": -2,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": 0,
+      "dragonResistance": 2,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "PARALYSIS_ATTACK"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Bnahabra Gloves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": -2,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": 0,
+      "dragonResistance": 2,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "EVADE_WINDOW"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Bnahabra Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": -2,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": 0,
+      "dragonResistance": 2,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "PARALYSIS_ATTACK"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Bnahabra Boots"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": -2,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": 0,
+      "dragonResistance": 2,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "RECOIL_DOWN"
+        }
+      ]
+    }
+  },
+  "BULLFANGO_LR": {
+    "names": ["Bullfango"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Bullfango Mask"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": 0,
+      "waterResistance": 4,
+      "iceResistance": 0,
+      "thunderResistance": -2,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "BLUDGEONER"
+        }
+      ]
+    },
+    "chest": null,
+    "gloves": null,
+    "waist": null,
+    "legs": null
+  },
+  "REMOBRA_LR": {
+    "names": ["Remobra"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Remobra Headgear"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": 1,
+      "waterResistance": 1,
+      "iceResistance": 1,
+      "thunderResistance": 1,
+      "dragonResistance": 2,
+      "skills": [
+        {
+          "level": 2,
+          "skillRef": "WINDPROOF"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Remobra Suit"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": 1,
+      "waterResistance": 1,
+      "iceResistance": 1,
+      "thunderResistance": 1,
+      "dragonResistance": 2,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "ITEM_PROLONGER"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Remobra Gloves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": 1,
+      "waterResistance": 1,
+      "iceResistance": 1,
+      "thunderResistance": 1,
+      "dragonResistance": 2,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CRITICAL_ELEMENT"
+        },
+        {
+          "level": 1,
+          "skillRef": "WINDPROOF"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Remobra Belt"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": 1,
+      "waterResistance": 1,
+      "iceResistance": 1,
+      "thunderResistance": 1,
+      "dragonResistance": 2,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CRITICAL_ELEMENT"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Remobra Feet"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": 1,
+      "waterResistance": 1,
+      "iceResistance": 1,
+      "thunderResistance": 1,
+      "dragonResistance": 2,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "DIVINE_BLESSING"
+        }
+      ]
+    }
+  },
+  "DROTH_LR": {
+    "names": ["Droth"],
+    "rankRef": "LOW_RANK",
+    "helm": null,
+    "chest": {
+      "names": ["Droth Mail"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": -2,
+      "waterResistance": 4,
+      "iceResistance": 0,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "WATER_RESISTANCE"
+        }
+      ]
+    },
+    "gloves": null,
+    "waist": {
+      "names": ["Droth Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": -2,
+      "waterResistance": 4,
+      "iceResistance": 0,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "DIVERSION"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Droth Greaves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": -2,
+      "waterResistance": 4,
+      "iceResistance": 0,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 2,
+          "skillRef": "WATER_RESISTANCE"
+        }
+      ]
+    }
+  },
+  "UROKTOR_LR": {
+    "names": ["Uroktor"],
+    "rankRef": "LOW_RANK",
+    "helm": null,
+    "chest": {
+      "names": ["Uroktor Torso"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": 4,
+      "waterResistance": -2,
+      "iceResistance": -1,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 2,
+          "skillRef": "FIRE_RESISTANCE"
+        }
+      ]
+    },
+    "gloves": null,
+    "waist": {
+      "names": ["Uroktor Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": 4,
+      "waterResistance": -2,
+      "iceResistance": -1,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "FIRE_RESISTANCE"
+        }
+      ]
+    },
+    "legs": null
+  },
+  "WROGGI_LR": {
+    "names": ["Wroggi"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Wroggi Helm"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": 2,
+      "waterResistance": -2,
+      "iceResistance": -4,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "EVADE_EXTENDER"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Wroggi Mail"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": 2,
+      "waterResistance": -2,
+      "iceResistance": -4,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "POISON_ATTACK"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Wroggi Vambraces"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": 2,
+      "waterResistance": -2,
+      "iceResistance": -4,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "AMMO_UP"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Wroggi Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": 2,
+      "waterResistance": -2,
+      "iceResistance": -4,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "POISON_ATTACK"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Wroggi Greaves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": 2,
+      "waterResistance": -2,
+      "iceResistance": -4,
+      "thunderResistance": 1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "EVADE_EXTENDER"
+        }
+      ]
+    }
+  },
+  "VOLVIDON_LR": {
+    "names": ["Volvidon"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Volvidon Helm"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": 2,
+      "waterResistance": -3,
+      "iceResistance": -1,
+      "thunderResistance": 0,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "PARALYSIS_ATTACK"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Volvidon Mail"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": 2,
+      "waterResistance": -3,
+      "iceResistance": -1,
+      "thunderResistance": 0,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "RAPID_MORPH"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Volvidon Vambraces"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": 2,
+      "waterResistance": -3,
+      "iceResistance": -1,
+      "thunderResistance": 0,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "EVADE_EXTENDER"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Volvidon Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": 2,
+      "waterResistance": -3,
+      "iceResistance": -1,
+      "thunderResistance": 0,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "RAPID_MORPH"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Volvidon Greaves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": 2,
+      "waterResistance": -3,
+      "iceResistance": -1,
+      "thunderResistance": 0,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "EVADE_EXTENDER"
+        }
+      ]
+    }
+  },
+  "LUDROTH_LR": {
+    "names": ["Ludroth"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Ludroth Helm"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -3,
+      "waterResistance": 4,
+      "iceResistance": 0,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "WATER_ATTACK"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Ludroth Mail"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -3,
+      "waterResistance": 4,
+      "iceResistance": 0,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "STAMINA_SURGE"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Ludroth Braces"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -3,
+      "waterResistance": 4,
+      "iceResistance": 0,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "MARATHON_RUNNER"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Ludroth Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -3,
+      "waterResistance": 4,
+      "iceResistance": 0,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "WATER_ATTACK"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Ludroth Greaves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -3,
+      "waterResistance": 4,
+      "iceResistance": 0,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "POWER_PROLONGER"
+        }
+      ]
+    }
+  },
+  "BARROTH_LR": {
+    "names": ["Barroth"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Barroth Helm"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -3,
+      "waterResistance": -1,
+      "iceResistance": -1,
+      "thunderResistance": 3,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "ATTACK_BOOST"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Barroth Mail"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -3,
+      "waterResistance": -1,
+      "iceResistance": -1,
+      "thunderResistance": 3,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "ATTACK_BOOST"
+        },
+        {
+          "level": 1,
+          "skillRef": "DEFENSE_BOOST"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Barroth Vambraces"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -3,
+      "waterResistance": -1,
+      "iceResistance": -1,
+      "thunderResistance": 3,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "AFFINITY_SLIDING"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Barroth Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -3,
+      "waterResistance": -1,
+      "iceResistance": -1,
+      "thunderResistance": 3,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "GUARD"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Barroth Greaves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 18,
+      "fireResistance": -3,
+      "waterResistance": -1,
+      "iceResistance": -1,
+      "thunderResistance": 3,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "GUARD"
+        }
+      ]
+    }
+  },
+  "KHEZU_LR": {
+    "names": ["Khezu"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Khezu Helm"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": -4,
+      "waterResistance": 1,
+      "iceResistance": 2,
+      "thunderResistance": 4,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "RECOVERY_UP"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Khezu Mail"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": -4,
+      "waterResistance": 1,
+      "iceResistance": 2,
+      "thunderResistance": 4,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "WALL_RUNNER"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Khezu Vambraces"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": -4,
+      "waterResistance": 1,
+      "iceResistance": 2,
+      "thunderResistance": 4,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "WALL_RUNNER"
+        },
+        {
+          "level": 1,
+          "skillRef": "RECOVERY_SPEED"
+        },
+        {
+          "level": 1,
+          "skillRef": "THUNDER_ATTACK"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Khezu Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": -4,
+      "waterResistance": 1,
+      "iceResistance": 2,
+      "thunderResistance": 4,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "FOCUS"
+        },
+        {
+          "level": 1,
+          "skillRef": "SLUGGER"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Khezu Greaves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": -4,
+      "waterResistance": 1,
+      "iceResistance": 2,
+      "thunderResistance": 4,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "RECOVERY_SPEED"
+        }
+      ]
+    }
+  },
+  "BARIOTH": {
+    "names": ["Barioth"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Barioth Helm"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": -5,
+      "waterResistance": 0,
+      "iceResistance": 3,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CRITICAL_DRAW"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Barioth Mail"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": -5,
+      "waterResistance": 0,
+      "iceResistance": 3,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "QUICK_SHEATHE"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Barioth Vambraces"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": -5,
+      "waterResistance": 0,
+      "iceResistance": 3,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CRITICAL_EYE"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Barioth Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": -5,
+      "waterResistance": 0,
+      "iceResistance": 3,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 2,
+          "skillRef": "CRITICAL_EYE"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Barioth Greaves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": -5,
+      "waterResistance": 0,
+      "iceResistance": 3,
+      "thunderResistance": -1,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "QUICK_SHEATHE"
+        }
+      ]
+    }
+  },
+  "RATHIAN_LR": {
+    "names": ["Rathian"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Rathian Helm"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": 3,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": -2,
+      "dragonResistance": -3,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "BLIGHT_RESISTANCE"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Rathian Mail"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": 3,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": -2,
+      "dragonResistance": -3,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "RECOVERY_UP"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Rathian Braces"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": 3,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": -2,
+      "dragonResistance": -3,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "BLIGHT_RESISTANCE"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Rathian Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": 3,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": -2,
+      "dragonResistance": -3,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "RECOVERY_UP"
+        },
+        {
+          "level": 1,
+          "skillRef": "WIDE_RANGE"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Rathian Greaves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": 3,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": -2,
+      "dragonResistance": -3,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "FREE_MEAL"
+        }
+      ]
+    }
+  },
+  "BASARIOS_LR": {
+    "names": ["Basarios"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Basarios Helm"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": 0,
+      "waterResistance": -2,
+      "iceResistance": 1,
+      "thunderResistance": 1,
+      "dragonResistance": -3,
+      "skills": [
+        {
+          "level": 2,
+          "skillRef": "DEFENSE_BOOST"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Basarios Mail"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": 0,
+      "waterResistance": -2,
+      "iceResistance": 1,
+      "thunderResistance": 1,
+      "dragonResistance": -3,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "GUARD"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Basarios Vambraces"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": 0,
+      "waterResistance": -2,
+      "iceResistance": 1,
+      "thunderResistance": 1,
+      "dragonResistance": -3,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "GUARD"
+        },
+        {
+          "level": 1,
+          "skillRef": "SPEED_SHARPENING"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Basarios Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": 0,
+      "waterResistance": -2,
+      "iceResistance": 1,
+      "thunderResistance": 1,
+      "dragonResistance": -3,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "SPEED_SHARPENING"
+        },
+        {
+          "level": 1,
+          "skillRef": "DEFENSE_BOOST"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Basarios Greaves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 22,
+      "fireResistance": 0,
+      "waterResistance": -2,
+      "iceResistance": 1,
+      "thunderResistance": 1,
+      "dragonResistance": -3,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "LOAD_SHELLS"
+        },
+        {
+          "level": 1,
+          "skillRef": "DEFENSE_BOOST"
+        }
+      ]
+    }
+  },
+  "KULU_YA_KU_LR": {
+    "names": ["Kulu-Ya-Ku"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Kulu-Ya-Ku Helm"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": 0,
+      "waterResistance": -3,
+      "iceResistance": 1,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "MAXIMUM_MIGHT"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Kulu-Ya-Ku Mail"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": 0,
+      "waterResistance": -3,
+      "iceResistance": 1,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "HORN_MAESTRO"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Kulu-Ya-Ku Braces"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": 0,
+      "waterResistance": -3,
+      "iceResistance": 1,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "SLUGGER"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Kulu-Ya-Ku Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": 0,
+      "waterResistance": -3,
+      "iceResistance": 1,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "STAMINA_THIEF"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Kulu-Ya-Ku Greaves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 16,
+      "fireResistance": 0,
+      "waterResistance": -3,
+      "iceResistance": 1,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "STUN_RESISTANCE"
+        },
+        {
+          "level": 1,
+          "skillRef": "CRITICAL_EYE"
+        }
+      ]
+    }
+  },
+  "PUKEI_PUKEI_LR": {
+    "names": ["Pukei-Pukei"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Pukei-Pukei Helm"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": 0,
+      "waterResistance": 3,
+      "iceResistance": 0,
+      "thunderResistance": -3,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "SPECIAL_AMMO_BOOST"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Pukei-Pukei Mail"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": 0,
+      "waterResistance": 3,
+      "iceResistance": 0,
+      "thunderResistance": -3,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CONSTITUTION"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Pukei-Pukei Braces"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": 0,
+      "waterResistance": 3,
+      "iceResistance": 0,
+      "thunderResistance": -3,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "SPARE_SHOT"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Pukei-Pukei Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": 0,
+      "waterResistance": 3,
+      "iceResistance": 0,
+      "thunderResistance": -3,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 2,
+          "skillRef": "POISON_ATTACK"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Pukei Greaves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": 0,
+      "waterResistance": 3,
+      "iceResistance": 0,
+      "thunderResistance": -3,
+      "dragonResistance": 1,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CONSTITUTION"
+        }
+      ]
+    }
+  },
+  "KADACHI_LR": {
+    "names": ["Kadachi"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Kadachi Helm"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": 0,
+      "waterResistance": -3,
+      "iceResistance": 0,
+      "thunderResistance": 3,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "JUMP_MASTER"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Tobi-Kadachi Mail"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": 0,
+      "waterResistance": -3,
+      "iceResistance": 0,
+      "thunderResistance": 3,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CRITICAL_EYE"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Tobi-Kadachi Braces"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": 0,
+      "waterResistance": -3,
+      "iceResistance": 0,
+      "thunderResistance": 3,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CONSTITUTION"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Tobi-Kadachi Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": 0,
+      "waterResistance": -3,
+      "iceResistance": 0,
+      "thunderResistance": 3,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 2,
+          "skillRef": "THUNDER_ATTACK"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Kadachi Greaves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 20,
+      "fireResistance": 0,
+      "waterResistance": -3,
+      "iceResistance": 0,
+      "thunderResistance": 3,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "CONSTITUTION"
+        },
+        {
+          "level": 1,
+          "skillRef": "CRITICAL_EYE"
+        }
+      ]
+    }
+  },
+  "JAGGI_LR_2": {
+    "names": ["Jaggi"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Jaggi Mask"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 14,
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "iceResistance": 0,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "AFFINITY_SLIDING"
+        }
+      ]
+    },
+    "chest": null,
+    "gloves": null,
+    "waist": null,
+    "legs": null
+  },
+  "BONE_LR": {
+    "names": ["Bone"],
+    "rankRef": "LOW_RANK",
+    "helm": {
+      "names": ["Bone Helm"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 10,
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "iceResistance": -1,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "PARTBREAKER"
+        }
+      ]
+    },
+    "chest": {
+      "names": ["Bone Mail"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 10,
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "iceResistance": -1,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "STAMINA_THIEF"
+        }
+      ]
+    },
+    "gloves": {
+      "names": ["Bone Vambraces"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 10,
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "iceResistance": -1,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "STAMINA_THIEF"
+        }
+      ]
+    },
+    "waist": {
+      "names": ["Bone Coil"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 10,
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "iceResistance": -1,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "FOCUS"
+        }
+      ]
+    },
+    "legs": {
+      "names": ["Bone Greaves"],
+      "description": "TODO",
+      "slots": [],
+      "rarityRef": "RARITY_2",
+      "defense": 10,
+      "fireResistance": 0,
+      "waterResistance": 0,
+      "iceResistance": -1,
+      "thunderResistance": 0,
+      "dragonResistance": 0,
+      "skills": [
+        {
+          "level": 1,
+          "skillRef": "MUCK_RESISTANCE"
+        }
+      ]
+    }
   }
 }

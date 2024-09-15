@@ -508,5 +508,937 @@
         "description": "TODO"
       }
     ]
+  },
+  "WATER_ATTACK": {
+    "name": "Water Attack",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      },
+      {
+        "level": 4,
+        "description": "TODO"
+      },
+      {
+        "level": 5,
+        "description": "TODO"
+      }
+    ]
+  },
+  "SPEED_SHARPENING": {
+    "name": "Speed Sharpening",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "WINDPROOF": {
+    "name": "Windproof",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "THUNDER_ATTACK": {
+    "name": "Thunder Attack",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      },
+      {
+        "level": 4,
+        "description": "TODO"
+      },
+      {
+        "level": 5,
+        "description": "TODO"
+      }
+    ]
+  },
+  "POWER_PROLONGER": {
+    "name": "Power Prolonger",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "PARALYSIS_RESISTANCE": {
+    "name": "Paralysis Resistance",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "DRAGON_RESISTANCE": {
+    "name": "Dragon Resistance",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "RAPID_MORPH": {
+    "name": "Rapid Morph",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "MAXIMUM_MIGHT": {
+    "name": "Maximum Might",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "BLAST_RESISTANCE": {
+    "name": "Blast Resistance",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "RELOAD_SPEED": {
+    "name": "Reload Speed",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "FIRE_ATTACK": {
+    "name": "Fire Attack",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      },
+      {
+        "level": 4,
+        "description": "TODO"
+      },
+      {
+        "level": 5,
+        "description": "TODO"
+      }
+    ]
+  },
+  "RECOIL_DOWN": {
+    "name": "Recoil Down",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "AMMO_UP": {
+    "name": "Ammo Up",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "STEADINESS": {
+    "name": "Steadiness",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "NORMAL_RAPID_UP": {
+    "name": "Normal/Rapid Up",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "MUSHROOMANCER": {
+    "name": "Mushroomancer",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "POISON_RESISTANCE": {
+    "name": "Poison Resistance",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "THUNDER_RESISTANCE": {
+    "name": "Thunder Resistance",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "POISON_ATTACK": {
+    "name": "Poison Attack",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "WATER_RESISTANCE": {
+    "name": "Water Resistance",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "BALLISTICS": {
+    "name": "Ballistics",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "SPREAD_UP": {
+    "name": "Spread Up",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "WIDE_RANGE": {
+    "name": "Wide-Range",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      },
+      {
+        "level": 4,
+        "description": "TODO"
+      },
+      {
+        "level": 5,
+        "description": "TODO"
+      }
+    ]
+  },
+  "SPEED_EATING": {
+    "name": "Speed Eating",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "SPECIAL_AMMO_BOOST": {
+    "name": "Special Ammo Boost",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      }
+    ]
+  },
+  "SLEEP_ATTACK": {
+    "name": "Sleep Attack",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "BOMBARDIER": {
+    "name": "Bombardier",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "LEAP_OF_FAITH": {
+    "name": "Leap of Faith",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      }
+    ]
+  },
+  "FREE_MEAL": {
+    "name": "Free Meal",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "PIERCE_UP": {
+    "name": "Pierce Up",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "ARTILLERY": {
+    "name": "Artillery",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "TREMOR_RESISTANCE": {
+    "name": "Tremor Resistance",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "MASTER_MOUNTER": {
+    "name": "Master Mounter",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      }
+    ]
+  },
+  "PARALYSIS_ATTACK": {
+    "name": "Paralysis Attack",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "EVADE_WINDOW": {
+    "name": "Evade Window",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      },
+      {
+        "level": 4,
+        "description": "TODO"
+      },
+      {
+        "level": 5,
+        "description": "TODO"
+      }
+    ]
+  },
+  "BLUDGEONER": {
+    "name": "Bludgeoner",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "CRITICAL_ELEMENT": {
+    "name": "Critical Element",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "FIRE_RESISTANCE": {
+    "name": "Fire Resistance",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 1,
+        "description": "TODO"
+      }
+    ]
+  },
+  "EVADE_EXTENDER": {
+    "name": "Evade Extender",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "MARATHON_RUNNER": {
+    "name": "Marathon Runner",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "FOCUS": {
+    "name": "Focus",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "SLUGGER": {
+    "name": "Slugger",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "CRITICAL_DRAW": {
+    "name": "Critical Draw",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "BLIGHT_RESISTANCE": {
+    "name": "Blight Resistance",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "LOAD_SHELLS": {
+    "name": "Load Shells",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      }
+    ]
+  },
+  "HORN_MAESTRO": {
+    "name": "Horn Maestro",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      }
+    ]
+  },
+  "STAMINA_THIEF": {
+    "name": "Stamina Thief",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "SPARE_SHOT": {
+    "name": "Spare Shot",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "JUMP_MASTER": {
+    "name": "Jump Master",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      }
+    ]
+  },
+  "PARTBREAKER": {
+    "name": "Partbreaker",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      },
+      {
+        "level": 3,
+        "description": "TODO"
+      }
+    ]
+  },
+  "MUCK_RESISTANCE": {
+    "name": "Muck Resistance",
+    "description": "TODO",
+    "levels": [
+      {
+        "level": 1,
+        "description": "TODO"
+      },
+      {
+        "level": 2,
+        "description": "TODO"
+      }
+    ]
   }
 }
