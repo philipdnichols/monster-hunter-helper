@@ -1,6 +1,6 @@
-import { ArmorSetMapping, ArmorSetMappingJson } from '../../typings/Armor';
-import { SkillMapping, SkillMappingJson } from '../../typings/Skills';
-import { parseArmorSetJson, parseSkillJson } from '../DataUtil';
+import { ArmorSetMapping, ArmorSetMappingJson } from '../typings/Armor';
+import { SkillMapping, SkillMappingJson } from '../typings/Skills';
+import { parseArmorSetJson, parseSkillJson } from './DataUtil';
 
 export function buildAllSkills(
   skillMappingJson: SkillMappingJson

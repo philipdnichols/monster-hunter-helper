@@ -1,9 +1,8 @@
 import { ReactElement } from 'react';
-import { Rise } from './rise/Rise';
 
-export const App = (): ReactElement => {
+export const Skill = (): ReactElement => {
   function render(): ReactElement {
-    return <Rise />;
+    return <div>Hello, world!</div>;
   }
 
   return render();
