@@ -1,9 +1,9 @@
 import { ReactElement } from 'react';
-import { Rise } from './rise/Rise';
+import { World } from './world/World';
 
 export const App = (): ReactElement => {
   function render(): ReactElement {
-    return <Rise />;
+    return <World />;
   }
 
   return render();
