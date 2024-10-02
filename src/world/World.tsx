@@ -7,11 +7,19 @@ import {
 } from 'react-router-dom';
 import { DataContext } from './context/DataContext';
 import { ISkill } from './typings/Skills';
-import skillsJson from './data/mhw-db/skills.json';
 import { IArmorSet } from './typings/ArmorSets';
-import armorSetsJson from './data/mhw-db/armor-sets.json';
 import { ArmorSetDataGrid } from './components/ArmorSetDataGrid/ArmorSetDataGrid';
-import { parseArmorSetsJson, parseSkillsJson } from './data/DataUtil';
+import {
+  parseArmorSetsJson,
+  parseArmorsJson,
+  parseSkillsJson,
+} from './data/DataUtil';
+import { ArmorSearcher } from './components/ArmorSearcher/ArmorSearcher';
+import skillsJson from './data/mhw-db/skills.json';
+import armorSetsJson from './data/mhw-db/armor-sets.json';
+import armorJson from './data/mhw-db/armor.json';
+import { IArmor } from './typings/Armor';
+import { ArmorDataGrid } from './components/ArmorDataGrid/ArmorDataGrid';
 
 const router = createBrowserRouter([
   {
@@ -23,8 +31,16 @@ const router = createBrowserRouter([
     element: <ArmorSetDataGrid />,
   },
   {
+    path: '/armor',
+    element: <ArmorDataGrid />,
+  },
+  {
+    path: '/armor-searcher',
+    element: <ArmorSearcher />,
+  },
+  {
     path: '/',
-    element: <Navigate to="/skills" />,
+    element: <Navigate to="/armor-searcher" />,
   },
 ]);
 
@@ -46,15 +62,17 @@ const router = createBrowserRouter([
 export const World = (): ReactElement => {
   const [skills, setSkills] = useState<ISkill[]>([]);
   const [armorSets, setArmorSets] = useState<IArmorSet[]>([]);
+  const [armors, setArmors] = useState<IArmor[]>([]);
 
   useEffect(() => {
     setSkills(parseSkillsJson(skillsJson));
     setArmorSets(parseArmorSetsJson(armorSetsJson));
+    setArmors(parseArmorsJson(armorJson));
   }, []);
 
   function render(): ReactElement {
     return (
-      <DataContext.Provider value={{ skills, armorSets }}>
+      <DataContext.Provider value={{ skills, armorSets, armors }}>
         <RouterProvider router={router} />
       </DataContext.Provider>
     );

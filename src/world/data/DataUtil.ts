@@ -144,3 +144,7 @@ function parseGenderJson(genderJson: string | undefined): EGender | undefined {
       throw new Error(`Could not parse gender json: ${genderJson}`);
   }
 }
+
+export function parseArmorsJson(armorsJson: IArmorJson[]): IArmor[] {
+  return armorsJson.map(parseArmorJson);
+}

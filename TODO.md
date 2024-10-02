@@ -6,3 +6,7 @@
 * categorize skills
 * rise armor set bonus resistance
 * armor assets and crafting info?
+* refactoring json data to remove embedded info from other "tables"?
+* way to indicate that you're over-capping a skill?
+* set bonuses in the armor searcher
+* move current temp stuff in armor searcher to it's own builder
