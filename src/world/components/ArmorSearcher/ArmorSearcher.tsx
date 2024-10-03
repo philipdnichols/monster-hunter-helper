@@ -1,5 +1,5 @@
-import { ReactElement, useContext, useEffect, useState } from 'react';
-import { Autocomplete, Box, Container, TextField } from '@mui/material';
+import React, { ReactElement, useContext, useEffect, useState } from 'react';
+import { Autocomplete, Box, Button, Container, TextField } from '@mui/material';
 import { DataContext, IDataContext } from '../../context/DataContext';
 import {
   ARMOR_TYPE_CHEST,
@@ -10,7 +10,13 @@ import {
   IArmor,
 } from '../../typings/Armor';
 import { ISkill, ISkillRank } from '../../typings/Skills';
-import { clamp } from 'lodash';
+import {
+  calculateSkillRanks,
+  findArmor,
+  findArmorPossibilities,
+  sortByBaseDefenseDescending,
+} from './ArmorSearchUtil';
+import { MASTER_RANK } from '../../typings/Shared';
 
 export const ArmorSearcher = (): ReactElement => {
   const { skills, armors } = useContext<IDataContext>(DataContext);
@@ -23,45 +29,81 @@ export const ArmorSearcher = (): ReactElement => {
 
   const [skillRanks, setSkillRanks] = useState<ISkillRank[]>([]);
 
+  const [selectedSkills, setSelectedSkills] = useState<(ISkill | null)[]>([]);
+
   useEffect(() => {
-    const skillRankLevels: { [skillId: string]: number } = {};
+    const selectedArmor: IArmor[] = [];
+    if (head) selectedArmor.push(head);
+    if (chest) selectedArmor.push(chest);
+    if (gloves) selectedArmor.push(gloves);
+    if (waist) selectedArmor.push(waist);
+    if (legs) selectedArmor.push(legs);
 
-    function addSkillRank(skillRank: ISkillRank) {
-      if (skillRankLevels[skillRank.skill] === undefined) {
-        skillRankLevels[skillRank.skill] = 0;
-      }
-      skillRankLevels[skillRank.skill] += skillRank.level;
-    }
+    setSkillRanks(calculateSkillRanks(selectedArmor, skills));
+  }, [head, chest, gloves, waist, legs, skills]);
 
-    head?.skills.forEach(addSkillRank);
-    chest?.skills.forEach(addSkillRank);
-    gloves?.skills.forEach(addSkillRank);
-    waist?.skills.forEach(addSkillRank);
-    legs?.skills.forEach(addSkillRank);
+  function handleAddSkill() {
+    setSelectedSkills([...selectedSkills, null]);
+  }
 
-    const _skillRanks: ISkillRank[] = [];
-    Object.entries(skillRankLevels).forEach(([skillId, level]) => {
-      const skill: ISkill | undefined = skills.find(
-        (skill: ISkill) => skill.id === Number(skillId)
-      );
+  function handleChangeSelectedSkill(
+    selectedSkill: ISkill | null,
+    index: number
+  ) {
+    const _selectedSkills = [...selectedSkills];
+    setSelectedSkills([
+      ..._selectedSkills.slice(0, index),
+      selectedSkill,
+      ..._selectedSkills.slice(index + 1),
+    ]);
+  }
 
-      if (!skill) {
-        throw new Error(`Cannot determine skill with ID ${skillId}`);
-      }
+  function handleRemoveSkill(index: number) {
+    const _selectedSkills = [...selectedSkills];
+    _selectedSkills.splice(index, 1);
+    setSelectedSkills(_selectedSkills);
+  }
 
-      _skillRanks.push(
-        skill.ranks[clamp(level - 1, 0, skill.ranks.length - 1)]
-      );
-    });
+  function handleFindArmor() {
+    const _selectedSkills: ISkill[] = selectedSkills.filter(
+      (selectedSkill: ISkill | null) => !!selectedSkill
+    ) as ISkill[];
 
-    _skillRanks.sort(
-      (skillRank1: ISkillRank, skillRank2: ISkillRank) =>
-        // TODO this sorting can be better, needs to prioritize offensive skills first, showing the set bonuses first maybe, etc.
-        skillRank2.level - skillRank1.level
+    const foundArmor = findArmor(
+      armors.filter((armor: IArmor) => armor.rank === MASTER_RANK),
+      _selectedSkills
     );
 
-    setSkillRanks(_skillRanks);
-  }, [head, chest, gloves, waist, legs]);
+    const armorPossibilities = findArmorPossibilities(
+      foundArmor
+        .filter((armor: IArmor) => armor.type === ARMOR_TYPE_HEAD)
+        .sort(sortByBaseDefenseDescending),
+      foundArmor
+        .filter((armor: IArmor) => armor.type === ARMOR_TYPE_CHEST)
+        .sort(sortByBaseDefenseDescending),
+      foundArmor
+        .filter((armor: IArmor) => armor.type === ARMOR_TYPE_GLOVES)
+        .sort(sortByBaseDefenseDescending),
+      foundArmor
+        .filter((armor: IArmor) => armor.type === ARMOR_TYPE_WAIST)
+        .sort(sortByBaseDefenseDescending),
+      foundArmor
+        .filter((armor: IArmor) => armor.type === ARMOR_TYPE_LEGS)
+        .sort(sortByBaseDefenseDescending),
+      _selectedSkills,
+      skills,
+      200
+    );
+
+    console.log(`Found ${armorPossibilities.length} possibilities`);
+    armorPossibilities.forEach((armorSet: IArmor[]) => {
+      const skillRanks = calculateSkillRanks(armorSet, skills);
+      console.log(`Armor Set: ${armorSet.map((armor: IArmor) => armor.name)}`);
+      console.log(
+        `Skills: ${skillRanks.map((skillRank: ISkillRank) => `${skillRank.skillName} Level ${skillRank.level}`)}`
+      );
+    });
+  }
 
   function render(): ReactElement {
     return (
@@ -71,61 +113,87 @@ export const ArmorSearcher = (): ReactElement => {
           flexDirection: 'column',
           padding: 3,
           gap: 2,
+          width: 500,
         }}
       >
-        <Autocomplete
-          sx={{ width: 500 }}
-          options={armors.filter((armor) => armor.type === ARMOR_TYPE_HEAD)}
-          // groupBy={(armor: IArmor) =>
-          //   (armor.armorSet as unknown as IArmorSet).name
-          // }
-          getOptionLabel={(armor: IArmor) => armor.name}
-          renderInput={(params) => <TextField {...params} label="Head" />}
-          onChange={(_, armor: IArmor | null) => {
-            setHead(armor);
-          }}
-        />
-        <Autocomplete
-          sx={{ width: 500 }}
-          options={armors.filter((armor) => armor.type === ARMOR_TYPE_CHEST)}
-          getOptionLabel={(armor: IArmor) => armor.name}
-          renderInput={(params) => <TextField {...params} label="Chest" />}
-          onChange={(_, armor: IArmor | null) => {
-            setChest(armor);
-          }}
-        />
-        <Autocomplete
-          sx={{ width: 500 }}
-          options={armors.filter((armor) => armor.type === ARMOR_TYPE_GLOVES)}
-          getOptionLabel={(armor: IArmor) => armor.name}
-          renderInput={(params) => <TextField {...params} label="Gloves" />}
-          onChange={(_, armor: IArmor | null) => {
-            setGloves(armor);
-          }}
-        />
-        <Autocomplete
-          sx={{ width: 500 }}
-          options={armors.filter((armor) => armor.type === ARMOR_TYPE_WAIST)}
-          getOptionLabel={(armor: IArmor) => armor.name}
-          renderInput={(params) => <TextField {...params} label="Waist" />}
-          onChange={(_, armor: IArmor | null) => {
-            setWaist(armor);
-          }}
-        />
-        <Autocomplete
-          sx={{ width: 500 }}
-          options={armors.filter((armor) => armor.type === ARMOR_TYPE_LEGS)}
-          getOptionLabel={(armor: IArmor) => armor.name}
-          renderInput={(params) => <TextField {...params} label="Legs" />}
-          onChange={(_, armor: IArmor | null) => {
-            setLegs(armor);
-          }}
-        />
+        <Button variant="contained" onClick={handleAddSkill}>
+          Add Skill
+        </Button>
+        {selectedSkills.map((selectedSkill: ISkill | null, index: number) => (
+          <Box sx={{ display: 'flex', gap: 1 }} key={`selectedSkill-${index}`}>
+            <Autocomplete
+              sx={{ flex: '3' }}
+              options={skills}
+              // groupBy={(armor: IArmor) =>
+              //   (armor.armorSet as unknown as IArmorSet).name
+              // }
+              getOptionLabel={(skill: ISkill) => skill.name}
+              renderInput={(params) => <TextField {...params} label="Skill" />}
+              onChange={(_, skill: ISkill | null) => {
+                handleChangeSelectedSkill(skill, index);
+              }}
+              value={selectedSkill}
+            />
+            <Button onClick={() => handleRemoveSkill(index)}>❌</Button>
+          </Box>
+        ))}
+
+        {/*<Autocomplete*/}
+        {/*  sx={{ width: 500 }}*/}
+        {/*  options={armors.filter((armor) => armor.type === ARMOR_TYPE_HEAD)}*/}
+        {/*  // groupBy={(armor: IArmor) =>*/}
+        {/*  //   (armor.armorSet as unknown as IArmorSet).name*/}
+        {/*  // }*/}
+        {/*  getOptionLabel={(armor: IArmor) => armor.name}*/}
+        {/*  renderInput={(params) => <TextField {...params} label="Head" />}*/}
+        {/*  onChange={(_, armor: IArmor | null) => {*/}
+        {/*    setHead(armor);*/}
+        {/*  }}*/}
+        {/*/>*/}
+        {/*<Autocomplete*/}
+        {/*  sx={{ width: 500 }}*/}
+        {/*  options={armors.filter((armor) => armor.type === ARMOR_TYPE_CHEST)}*/}
+        {/*  getOptionLabel={(armor: IArmor) => armor.name}*/}
+        {/*  renderInput={(params) => <TextField {...params} label="Chest" />}*/}
+        {/*  onChange={(_, armor: IArmor | null) => {*/}
+        {/*    setChest(armor);*/}
+        {/*  }}*/}
+        {/*/>*/}
+        {/*<Autocomplete*/}
+        {/*  sx={{ width: 500 }}*/}
+        {/*  options={armors.filter((armor) => armor.type === ARMOR_TYPE_GLOVES)}*/}
+        {/*  getOptionLabel={(armor: IArmor) => armor.name}*/}
+        {/*  renderInput={(params) => <TextField {...params} label="Gloves" />}*/}
+        {/*  onChange={(_, armor: IArmor | null) => {*/}
+        {/*    setGloves(armor);*/}
+        {/*  }}*/}
+        {/*/>*/}
+        {/*<Autocomplete*/}
+        {/*  sx={{ width: 500 }}*/}
+        {/*  options={armors.filter((armor) => armor.type === ARMOR_TYPE_WAIST)}*/}
+        {/*  getOptionLabel={(armor: IArmor) => armor.name}*/}
+        {/*  renderInput={(params) => <TextField {...params} label="Waist" />}*/}
+        {/*  onChange={(_, armor: IArmor | null) => {*/}
+        {/*    setWaist(armor);*/}
+        {/*  }}*/}
+        {/*/>*/}
+        {/*<Autocomplete*/}
+        {/*  sx={{ width: 500 }}*/}
+        {/*  options={armors.filter((armor) => armor.type === ARMOR_TYPE_LEGS)}*/}
+        {/*  getOptionLabel={(armor: IArmor) => armor.name}*/}
+        {/*  renderInput={(params) => <TextField {...params} label="Legs" />}*/}
+        {/*  onChange={(_, armor: IArmor | null) => {*/}
+        {/*    setLegs(armor);*/}
+        {/*  }}*/}
+        {/*/>*/}
         {/*<Box>Selected Head: {head?.name}</Box>*/}
         {/*<Box>Selected Head: {chest?.name}</Box>*/}
         {/*<Box>Selected Head: {gloves?.name}</Box>*/}
         {/*<Box>Selected Head: {waist?.name}</Box>*/}
         {/*<Box>Selected Head: {legs?.name}</Box>*/}
+        <Button variant="contained" onClick={handleFindArmor}>
+          Find Armor
+        </Button>
         <Box>
           Skills:
           {skillRanks.map((skillRank: ISkillRank) => (
