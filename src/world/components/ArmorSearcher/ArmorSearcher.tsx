@@ -11,69 +11,95 @@ import {
 } from '../../typings/Armor';
 import { ISkill, ISkillRank } from '../../typings/Skills';
 import {
-  calculateSkillRanks,
   findArmor,
   findArmorPossibilities,
   sortByBaseDefenseDescending,
 } from './ArmorSearchUtil';
-import { MASTER_RANK } from '../../typings/Shared';
+import { HIGH_RANK, LOW_RANK } from '../../typings/Shared';
+
+interface SkillMapping {
+  [id: string]: ISkill;
+}
 
 export const ArmorSearcher = (): ReactElement => {
   const { skills, armors } = useContext<IDataContext>(DataContext);
 
-  const [head, setHead] = useState<IArmor | null>(null);
-  const [chest, setChest] = useState<IArmor | null>(null);
-  const [gloves, setGloves] = useState<IArmor | null>(null);
-  const [waist, setWaist] = useState<IArmor | null>(null);
-  const [legs, setLegs] = useState<IArmor | null>(null);
+  // const [head, setHead] = useState<IArmor | null>(null);
+  // const [chest, setChest] = useState<IArmor | null>(null);
+  // const [gloves, setGloves] = useState<IArmor | null>(null);
+  // const [waist, setWaist] = useState<IArmor | null>(null);
+  // const [legs, setLegs] = useState<IArmor | null>(null);
 
+  const [skillMapping, setSkillMapping] = useState<SkillMapping>({});
   const [skillRanks, setSkillRanks] = useState<ISkillRank[]>([]);
 
-  const [selectedSkills, setSelectedSkills] = useState<(ISkill | null)[]>([]);
+  const [selectedSkillRanks, setSelectedSkillRanks] = useState<
+    (ISkillRank | null)[]
+  >([]);
 
   useEffect(() => {
-    const selectedArmor: IArmor[] = [];
-    if (head) selectedArmor.push(head);
-    if (chest) selectedArmor.push(chest);
-    if (gloves) selectedArmor.push(gloves);
-    if (waist) selectedArmor.push(waist);
-    if (legs) selectedArmor.push(legs);
+    const _skillMapping: SkillMapping = {};
+    const _skillRanks: ISkillRank[] = [];
 
-    setSkillRanks(calculateSkillRanks(selectedArmor, skills));
-  }, [head, chest, gloves, waist, legs, skills]);
+    skills.forEach((skill: ISkill) => {
+      _skillMapping[skill.id] = skill;
+      _skillRanks.push(...skill.ranks);
+    });
 
-  function handleAddSkill() {
-    setSelectedSkills([...selectedSkills, null]);
+    setSkillMapping(_skillMapping);
+    setSkillRanks(_skillRanks);
+  }, [skills]);
+
+  // useEffect(() => {
+  //   const selectedArmor: IArmor[] = [];
+  //   if (head) selectedArmor.push(head);
+  //   if (chest) selectedArmor.push(chest);
+  //   if (gloves) selectedArmor.push(gloves);
+  //   if (waist) selectedArmor.push(waist);
+  //   if (legs) selectedArmor.push(legs);
+  //
+  //   setSkillRanks(calculateSkillRanks(selectedArmor, skills));
+  // }, [head, chest, gloves, waist, legs, skills]);
+
+  function handleAddSkillRank() {
+    setSelectedSkillRanks([...selectedSkillRanks, null]);
   }
 
-  function handleChangeSelectedSkill(
-    selectedSkill: ISkill | null,
+  function handleChangeSelectedSkillRank(
+    selectedSkillRank: ISkillRank | null,
     index: number
   ) {
-    const _selectedSkills = [...selectedSkills];
-    setSelectedSkills([
-      ..._selectedSkills.slice(0, index),
-      selectedSkill,
-      ..._selectedSkills.slice(index + 1),
+    const _selectedSkillRanks = [...selectedSkillRanks];
+    setSelectedSkillRanks([
+      ..._selectedSkillRanks.slice(0, index),
+      selectedSkillRank,
+      ..._selectedSkillRanks.slice(index + 1),
     ]);
   }
 
-  function handleRemoveSkill(index: number) {
-    const _selectedSkills = [...selectedSkills];
-    _selectedSkills.splice(index, 1);
-    setSelectedSkills(_selectedSkills);
+  function handleRemoveSkillRank(index: number) {
+    const _selectedSkillRanks = [...selectedSkillRanks];
+    _selectedSkillRanks.splice(index, 1);
+    setSelectedSkillRanks(_selectedSkillRanks);
   }
 
   function handleFindArmor() {
-    const _selectedSkills: ISkill[] = selectedSkills.filter(
-      (selectedSkill: ISkill | null) => !!selectedSkill
-    ) as ISkill[];
+    const _selectedSkillRanks: ISkillRank[] = selectedSkillRanks.filter(
+      (selectedSkillRank: ISkillRank | null) => !!selectedSkillRank
+    ) as ISkillRank[];
 
+    let time = new Date().getTime();
     const foundArmor = findArmor(
-      armors.filter((armor: IArmor) => armor.rank === MASTER_RANK),
-      _selectedSkills
+      armors.filter(
+        (armor: IArmor) => armor.rank === LOW_RANK || armor.rank === HIGH_RANK
+      ),
+      _selectedSkillRanks.map(
+        (selectedSkillRank: ISkillRank) => skillMapping[selectedSkillRank.skill]
+      )
     );
+    console.log(`findArmor took ${new Date().getTime() - time} milliseconds`);
 
+    time = new Date().getTime();
     const armorPossibilities = findArmorPossibilities(
       foundArmor
         .filter((armor: IArmor) => armor.type === ARMOR_TYPE_HEAD)
@@ -90,19 +116,22 @@ export const ArmorSearcher = (): ReactElement => {
       foundArmor
         .filter((armor: IArmor) => armor.type === ARMOR_TYPE_LEGS)
         .sort(sortByBaseDefenseDescending),
-      _selectedSkills,
+      _selectedSkillRanks,
       skills,
-      200
+      100000000
+    );
+    console.log(
+      `findArmorPossibilities took ${new Date().getTime() - time} milliseconds`
     );
 
     console.log(`Found ${armorPossibilities.length} possibilities`);
-    armorPossibilities.forEach((armorSet: IArmor[]) => {
-      const skillRanks = calculateSkillRanks(armorSet, skills);
-      console.log(`Armor Set: ${armorSet.map((armor: IArmor) => armor.name)}`);
-      console.log(
-        `Skills: ${skillRanks.map((skillRank: ISkillRank) => `${skillRank.skillName} Level ${skillRank.level}`)}`
-      );
-    });
+    // armorPossibilities.forEach((armorSet: IArmor[]) => {
+    //   const skillRanks = calculateSkillRanks(armorSet, skills);
+    //   console.log(`Armor Set: ${armorSet.map((armor: IArmor) => armor.name)}`);
+    //   console.log(
+    //     `Skills: ${skillRanks.map((skillRank: ISkillRank) => `${skillRank.skillName} Level ${skillRank.level}`)}`
+    //   );
+    // });
   }
 
   function render(): ReactElement {
@@ -116,27 +145,51 @@ export const ArmorSearcher = (): ReactElement => {
           width: 500,
         }}
       >
-        <Button variant="contained" onClick={handleAddSkill}>
+        <Button variant="contained" onClick={handleAddSkillRank}>
           Add Skill
         </Button>
-        {selectedSkills.map((selectedSkill: ISkill | null, index: number) => (
-          <Box sx={{ display: 'flex', gap: 1 }} key={`selectedSkill-${index}`}>
-            <Autocomplete
-              sx={{ flex: '3' }}
-              options={skills}
-              // groupBy={(armor: IArmor) =>
-              //   (armor.armorSet as unknown as IArmorSet).name
-              // }
-              getOptionLabel={(skill: ISkill) => skill.name}
-              renderInput={(params) => <TextField {...params} label="Skill" />}
-              onChange={(_, skill: ISkill | null) => {
-                handleChangeSelectedSkill(skill, index);
-              }}
-              value={selectedSkill}
-            />
-            <Button onClick={() => handleRemoveSkill(index)}>❌</Button>
-          </Box>
-        ))}
+        {selectedSkillRanks.map(
+          (selectedSkillRank: ISkillRank | null, index: number) => (
+            <Box
+              sx={{ display: 'flex', gap: 1 }}
+              key={`selectedSkillRank-${index}`}
+            >
+              <Autocomplete
+                sx={{ flex: '3' }}
+                options={skillRanks.filter((skillRank: ISkillRank) => {
+                  return (
+                    selectedSkillRank === null ||
+                    skillRank.skill !== selectedSkillRank.skill
+                  );
+                })}
+                // TODO add filtering for other skill ranks selected in the UI,
+                //  but not the rank that is selected in THIS autocomplete,
+                //  so that you can't have two skill ranks for the same skill
+                //  selected
+                // options={skillRanks.filter((skillRank: ISkillRank) => {
+                //   return (
+                //     selectedSkillRank === null ||
+                //     skillRank.skill !== selectedSkillRank.skill
+                //   );
+                // })}
+                // groupBy={(armor: IArmor) =>
+                //   (armor.armorSet as unknown as IArmorSet).name
+                // }
+                getOptionLabel={(skillRank: ISkillRank) =>
+                  `${skillRank.skillName} Level ${skillRank.level}`
+                }
+                renderInput={(params) => (
+                  <TextField {...params} label="Skill Rank" />
+                )}
+                onChange={(_, skillRank: ISkillRank | null) => {
+                  handleChangeSelectedSkillRank(skillRank, index);
+                }}
+                value={selectedSkillRank}
+              />
+              <Button onClick={() => handleRemoveSkillRank(index)}>❌</Button>
+            </Box>
+          )
+        )}
 
         {/*<Autocomplete*/}
         {/*  sx={{ width: 500 }}*/}
@@ -194,14 +247,14 @@ export const ArmorSearcher = (): ReactElement => {
         <Button variant="contained" onClick={handleFindArmor}>
           Find Armor
         </Button>
-        <Box>
-          Skills:
-          {skillRanks.map((skillRank: ISkillRank) => (
-            <Box key={skillRank.skillName}>
-              {skillRank.skillName} Level {skillRank.level}
-            </Box>
-          ))}
-        </Box>
+        {/*<Box>*/}
+        {/*  Skills:*/}
+        {/*  {skillRanks.map((skillRank: ISkillRank) => (*/}
+        {/*    <Box key={skillRank.skillName}>*/}
+        {/*      {skillRank.skillName} Level {skillRank.level}*/}
+        {/*    </Box>*/}
+        {/*  ))}*/}
+        {/*</Box>*/}
       </Container>
     );
   }

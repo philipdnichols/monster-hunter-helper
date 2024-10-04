@@ -51,18 +51,24 @@ export function findArmor(
   });
 }
 
+// TODO turn into a hook because we pass in 'skills'?
 export function findArmorPossibilities(
   headArmors: IArmor[],
   chestArmors: IArmor[],
   gloveArmors: IArmor[],
   waistArmors: IArmor[],
   legArmors: IArmor[],
-  desiredSkills: ISkill[],
+  desiredSkillRanks: ISkillRank[],
   skills: ISkill[],
   limit: number
 ): IArmor[][] {
   const armorSets: IArmor[][] = [];
 
+  // TODO possible optimization - build the set and add and remove skill ranks
+  //  as the iteration happens?
+  console.log(
+    `Checking ${headArmors.length * chestArmors.length * gloveArmors.length * waistArmors.length * legArmors.length} armor sets for solutions, limiting to ${limit} solutions`
+  );
   for (const head of headArmors) {
     for (const chest of chestArmors) {
       for (const gloves of gloveArmors) {
@@ -70,13 +76,17 @@ export function findArmorPossibilities(
           for (const legs of legArmors) {
             const armorSet = [head, chest, gloves, waist, legs];
             const skillRanks = calculateSkillRanks(armorSet, skills);
-            const skillIds = skillRanks.map(
-              (skillRank: ISkillRank) => skillRank.skill
-            );
+            const skillToRankLevelMapping: { [skillId: number]: number } = {};
+            skillRanks.forEach((skillRank: ISkillRank) => {
+              skillToRankLevelMapping[skillRank.skill] = skillRank.level;
+            });
 
             let armorSetContainsDesiredSkills = true;
-            for (const desiredSkill of desiredSkills) {
-              if (!skillIds.includes(desiredSkill.id)) {
+            for (const desiredSkillRank of desiredSkillRanks) {
+              const skillRankLevel: number | undefined =
+                skillToRankLevelMapping[desiredSkillRank.skill];
+
+              if (!skillRankLevel || skillRankLevel < desiredSkillRank.level) {
                 armorSetContainsDesiredSkills = false;
                 break;
               }

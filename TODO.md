@@ -10,3 +10,14 @@
 * way to indicate that you're over-capping a skill?
 * set bonuses in the armor searcher
 * move current temp stuff in armor searcher to it's own builder
+
+Searcher:
+
+* optimize armors used to search by eliminating 100% worse options (as determined by skills, other factors could be
+  different)
+* for the above note, make it so that the user can specify exactly what armors are allowed during the search (e.g. ASS)
+* progress bar?
+* decorations
+* set bonuses
+* charms
+* web workers?
