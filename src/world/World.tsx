@@ -92,7 +92,7 @@ export const World = (): ReactElement => {
       <DataContext.Provider
         value={{ skills, armorSets, armors, charms, decorations }}
       >
-        <Tabs value={pathname}>
+        <Tabs value={pathname === '/' ? ARMOR_SEARCHER_ROUTE : pathname}>
           <Tab
             label="Armor Searcher"
             value={ARMOR_SEARCHER_ROUTE}

@@ -1,8 +1,19 @@
 import { IArmor } from '../../typings/Armor';
 import { ISkill, ISkillRank } from '../../typings/Skills';
 import { clamp } from 'lodash';
+import { ICharm, ICharmRank } from '../../typings/Charms';
+import {
+  DataContext,
+  IDataContext,
+  ISkillMapping,
+} from '../../context/DataContext';
+import { useContext } from 'react';
 
-export function calculateSkillRanks(armor: IArmor[], skills: ISkill[]) {
+export function calculateSkillRanks(
+  armor: IArmor[],
+  charm: ICharmRank,
+  allSkills: ISkillMapping
+) {
   const skillRankLevels: { [skillId: string]: number } = {};
 
   function addSkillRank(skillRank: ISkillRank) {
@@ -13,12 +24,11 @@ export function calculateSkillRanks(armor: IArmor[], skills: ISkill[]) {
   }
 
   armor.forEach((armor: IArmor) => armor.skills.forEach(addSkillRank));
+  charm.skills.forEach(addSkillRank);
 
   const skillRanks: ISkillRank[] = [];
   Object.entries(skillRankLevels).forEach(([skillId, level]) => {
-    const skill: ISkill | undefined = skills.find(
-      (skill: ISkill) => skill.id === Number(skillId)
-    );
+    const skill: ISkill | undefined = allSkills[Number(skillId)];
 
     if (!skill) {
       throw new Error(`Cannot determine skill with ID ${skillId}`);
@@ -38,62 +48,99 @@ export function calculateSkillRanks(armor: IArmor[], skills: ISkill[]) {
 
 export function findArmor(
   availableArmor: IArmor[],
-  skills: ISkill[]
+  desiredSkills: ISkill[]
 ): IArmor[] {
   return availableArmor.filter((armor: IArmor) => {
     const armorSkillIds = armor.skills.map(
       (skillRank: ISkillRank) => skillRank.skill
     );
     return (
-      skills.findIndex((skill: ISkill) => armorSkillIds.includes(skill.id)) !==
-      -1
+      desiredSkills.findIndex((skill: ISkill) =>
+        armorSkillIds.includes(skill.id)
+      ) !== -1
     );
   });
 }
 
-// TODO turn into a hook because we pass in 'skills'?
-export function findArmorPossibilities(
-  headArmors: IArmor[],
-  chestArmors: IArmor[],
-  gloveArmors: IArmor[],
-  waistArmors: IArmor[],
-  legArmors: IArmor[],
-  desiredSkillRanks: ISkillRank[],
-  skills: ISkill[],
-  limit: number
-): IArmor[][] {
-  const armorSets: IArmor[][] = [];
+export function findCharms(
+  availableCharms: ICharm[],
+  desiredSkills: ISkill[]
+): ICharm[] {
+  return availableCharms.filter((charm: ICharm) => {
+    // TODO do we need to check all the ranks, or maybe just one is enough?
+    const armorSkillIds = charm.ranks
+      .map((charmRank: ICharmRank) => charmRank.skills)
+      .flat()
+      .map((skillRank: ISkillRank) => skillRank.skill);
+    return (
+      desiredSkills.findIndex((skill: ISkill) =>
+        armorSkillIds.includes(skill.id)
+      ) !== -1
+    );
+  });
+}
 
-  // TODO possible optimization - build the set and add and remove skill ranks
-  //  as the iteration happens?
-  console.log(
-    `Checking ${headArmors.length * chestArmors.length * gloveArmors.length * waistArmors.length * legArmors.length} armor sets for solutions, limiting to ${limit} solutions`
-  );
-  for (const head of headArmors) {
-    for (const chest of chestArmors) {
-      for (const gloves of gloveArmors) {
-        for (const waist of waistArmors) {
-          for (const legs of legArmors) {
-            const armorSet = [head, chest, gloves, waist, legs];
-            const skillRanks = calculateSkillRanks(armorSet, skills);
-            const skillToRankLevelMapping: { [skillId: number]: number } = {};
-            skillRanks.forEach((skillRank: ISkillRank) => {
-              skillToRankLevelMapping[skillRank.skill] = skillRank.level;
-            });
+export const useFindArmorPossibilities = () => {
+  const { skills } = useContext<IDataContext>(DataContext);
 
-            let armorSetContainsDesiredSkills = true;
-            for (const desiredSkillRank of desiredSkillRanks) {
-              const skillRankLevel: number | undefined =
-                skillToRankLevelMapping[desiredSkillRank.skill];
+  return (
+    headArmors: IArmor[],
+    chestArmors: IArmor[],
+    gloveArmors: IArmor[],
+    waistArmors: IArmor[],
+    legArmors: IArmor[],
+    charmRanks: ICharmRank[],
+    desiredSkillRanks: ISkillRank[],
+    limit: number
+  ): IArmor[][] => {
+    // TODO return charm
+    const armorSets: IArmor[][] = [];
 
-              if (!skillRankLevel || skillRankLevel < desiredSkillRank.level) {
-                armorSetContainsDesiredSkills = false;
+    // TODO possible optimization - build the set and add and remove skill ranks
+    //  as the iteration happens?
+    console.log(
+      `Checking ${headArmors.length * chestArmors.length * gloveArmors.length * waistArmors.length * legArmors.length * charmRanks.length} armor sets for solutions, limiting to ${limit} solutions`
+    );
+    for (const head of headArmors) {
+      for (const chest of chestArmors) {
+        for (const gloves of gloveArmors) {
+          for (const waist of waistArmors) {
+            for (const legs of legArmors) {
+              for (const charm of charmRanks) {
+                const armorSet = [head, chest, gloves, waist, legs];
+                const skillRanks = calculateSkillRanks(armorSet, charm, skills);
+                const skillToRankLevelMapping: { [skillId: number]: number } =
+                  {};
+                skillRanks.forEach((skillRank: ISkillRank) => {
+                  skillToRankLevelMapping[skillRank.skill] = skillRank.level;
+                });
+
+                let armorSetContainsDesiredSkills = true;
+                for (const desiredSkillRank of desiredSkillRanks) {
+                  const skillRankLevel: number | undefined =
+                    skillToRankLevelMapping[desiredSkillRank.skill];
+
+                  if (
+                    !skillRankLevel ||
+                    skillRankLevel < desiredSkillRank.level
+                  ) {
+                    armorSetContainsDesiredSkills = false;
+                    break;
+                  }
+                }
+
+                if (armorSetContainsDesiredSkills) {
+                  armorSets.push(armorSet);
+                }
+
+                if (armorSets.length >= limit) {
+                  break;
+                }
+              }
+
+              if (armorSets.length >= limit) {
                 break;
               }
-            }
-
-            if (armorSetContainsDesiredSkills) {
-              armorSets.push(armorSet);
             }
 
             if (armorSets.length >= limit) {
@@ -116,13 +163,9 @@ export function findArmorPossibilities(
       }
     }
 
-    if (armorSets.length >= limit) {
-      break;
-    }
-  }
-
-  return armorSets;
-}
+    return armorSets;
+  };
+};
 
 export function sortByBaseDefenseDescending(armor1: IArmor, armor2: IArmor) {
   return armor2.defense.base - armor1.defense.base;

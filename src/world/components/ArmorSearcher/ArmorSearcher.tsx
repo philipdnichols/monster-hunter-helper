@@ -12,13 +12,15 @@ import {
 import { ISkill, ISkillRank } from '../../typings/Skills';
 import {
   findArmor,
-  findArmorPossibilities,
+  findCharms,
   sortByBaseDefenseDescending,
+  useFindArmorPossibilities,
 } from './ArmorSearchUtil';
+import { ICharm, ICharmRank } from '../../typings/Charms';
 import { HIGH_RANK, LOW_RANK } from '../../typings/Shared';
 
 export const ArmorSearcher = (): ReactElement => {
-  const { skills, armors } = useContext<IDataContext>(DataContext);
+  const { skills, armors, charms } = useContext<IDataContext>(DataContext);
 
   // const [head, setHead] = useState<IArmor | null>(null);
   // const [chest, setChest] = useState<IArmor | null>(null);
@@ -26,29 +28,33 @@ export const ArmorSearcher = (): ReactElement => {
   // const [waist, setWaist] = useState<IArmor | null>(null);
   // const [legs, setLegs] = useState<IArmor | null>(null);
 
-  const [skillArray, setSkillArray] = useState<ISkill[]>([]);
   const [skillRanks, setSkillRanks] = useState<ISkillRank[]>([]);
   const [armorArray, setArmorArray] = useState<IArmor[]>([]);
+  const [charmArray, setCharmArray] = useState<ICharm[]>([]);
 
   const [selectedSkillRanks, setSelectedSkillRanks] = useState<
     (ISkillRank | null)[]
   >([]);
 
+  const findArmorPossibilities = useFindArmorPossibilities();
+
   useEffect(() => {
-    const _skillArray: ISkill[] = Object.values(skills);
     const _skillRanks: ISkillRank[] = [];
 
-    _skillArray.forEach((skill: ISkill) => {
+    Object.values(skills).forEach((skill: ISkill) => {
       _skillRanks.push(...skill.ranks);
     });
 
-    setSkillArray(_skillArray);
     setSkillRanks(_skillRanks);
   }, [skills]);
 
   useEffect(() => {
     setArmorArray(Object.values(armors));
   }, [armors]);
+
+  useEffect(() => {
+    setCharmArray(Object.values(charms));
+  }, [charms]);
 
   // useEffect(() => {
   //   const selectedArmor: IArmor[] = [];
@@ -87,38 +93,67 @@ export const ArmorSearcher = (): ReactElement => {
     const _selectedSkillRanks: ISkillRank[] = selectedSkillRanks.filter(
       (selectedSkillRank: ISkillRank | null) => !!selectedSkillRank
     ) as ISkillRank[];
+    const desiredSkills = _selectedSkillRanks.map(
+      (selectedSkillRank: ISkillRank) => skills[selectedSkillRank.skill]
+    );
 
     let time = new Date().getTime();
     const foundArmor = findArmor(
       armorArray.filter(
         (armor: IArmor) => armor.rank === LOW_RANK || armor.rank === HIGH_RANK
       ),
-      _selectedSkillRanks.map(
-        (selectedSkillRank: ISkillRank) => skills[selectedSkillRank.skill]
-      )
+      desiredSkills
     );
     console.log(`findArmor took ${new Date().getTime() - time} milliseconds`);
 
     time = new Date().getTime();
+    const foundCharms = findCharms(charmArray, desiredSkills);
+    console.log(`findCharms took ${new Date().getTime() - time} milliseconds`);
+
+    time = new Date().getTime();
+    const headArmors: IArmor[] = foundArmor
+      .filter((armor: IArmor) => armor.type === ARMOR_TYPE_HEAD)
+      .sort(sortByBaseDefenseDescending);
+    const chestArmors: IArmor[] = foundArmor
+      .filter((armor: IArmor) => armor.type === ARMOR_TYPE_CHEST)
+      .sort(sortByBaseDefenseDescending);
+    const gloveArmors: IArmor[] = foundArmor
+      .filter((armor: IArmor) => armor.type === ARMOR_TYPE_GLOVES)
+      .sort(sortByBaseDefenseDescending);
+    const waistArmors: IArmor[] = foundArmor
+      .filter((armor: IArmor) => armor.type === ARMOR_TYPE_WAIST)
+      .sort(sortByBaseDefenseDescending);
+    const legArmors: IArmor[] = foundArmor
+      .filter((armor: IArmor) => armor.type === ARMOR_TYPE_LEGS)
+      .sort(sortByBaseDefenseDescending);
+    const charmRanks = foundCharms
+      .map((charm: ICharm) => charm.ranks)
+      .flat()
+      .filter((charmRank: ICharmRank) => charmRank.rarity <= 8);
+
+    console.log(`Head Armor: ${headArmors.map((armor: IArmor) => armor.name)}`);
+    console.log(
+      `Chest Armor: ${chestArmors.map((armor: IArmor) => armor.name)}`
+    );
+    console.log(
+      `Glove Armor: ${gloveArmors.map((armor: IArmor) => armor.name)}`
+    );
+    console.log(
+      `Waist Armor: ${waistArmors.map((armor: IArmor) => armor.name)}`
+    );
+    console.log(`Leg Armor: ${legArmors.map((armor: IArmor) => armor.name)}`);
+    console.log(
+      `Charms: ${foundCharms.map((charm: ICharm) => charm.ranks.filter((charmRank: ICharmRank) => charmRank.rarity <= 8).map((charmRank: ICharmRank) => `${charm.name} ${charmRank.level}`))}`
+    );
     const armorPossibilities = findArmorPossibilities(
-      foundArmor
-        .filter((armor: IArmor) => armor.type === ARMOR_TYPE_HEAD)
-        .sort(sortByBaseDefenseDescending),
-      foundArmor
-        .filter((armor: IArmor) => armor.type === ARMOR_TYPE_CHEST)
-        .sort(sortByBaseDefenseDescending),
-      foundArmor
-        .filter((armor: IArmor) => armor.type === ARMOR_TYPE_GLOVES)
-        .sort(sortByBaseDefenseDescending),
-      foundArmor
-        .filter((armor: IArmor) => armor.type === ARMOR_TYPE_WAIST)
-        .sort(sortByBaseDefenseDescending),
-      foundArmor
-        .filter((armor: IArmor) => armor.type === ARMOR_TYPE_LEGS)
-        .sort(sortByBaseDefenseDescending),
+      headArmors,
+      chestArmors,
+      gloveArmors,
+      waistArmors,
+      legArmors,
+      charmRanks,
       _selectedSkillRanks,
-      skillArray,
-      100000000
+      200
     );
     console.log(
       `findArmorPossibilities took ${new Date().getTime() - time} milliseconds`
@@ -156,12 +191,7 @@ export const ArmorSearcher = (): ReactElement => {
             >
               <Autocomplete
                 sx={{ flex: '3' }}
-                options={skillRanks.filter((skillRank: ISkillRank) => {
-                  return (
-                    selectedSkillRank === null ||
-                    skillRank.skill !== selectedSkillRank.skill
-                  );
-                })}
+                options={skillRanks}
                 // TODO add filtering for other skill ranks selected in the UI,
                 //  but not the rank that is selected in THIS autocomplete,
                 //  so that you can't have two skill ranks for the same skill

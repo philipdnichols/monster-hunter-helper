@@ -19,5 +19,8 @@ Searcher:
 * progress bar?
 * decorations
 * set bonuses
-* charms
 * web workers?
+* Athena's ASS has an interesting optimization that adds an armor to the list of armors to check if it has a certain
+  number of slots, I think? Unclear exactly what the determining factor is, but some kind of optimization like that
+  might be interesting to explore - could also add a feature to add any arbitrary armor to the list so that the user
+  could further customize
