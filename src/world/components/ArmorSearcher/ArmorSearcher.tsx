@@ -1,4 +1,4 @@
-import React, { ReactElement, useContext, useEffect, useState } from 'react';
+import { ReactElement, useContext, useEffect, useState } from 'react';
 import { Autocomplete, Box, Button, Container, TextField } from '@mui/material';
 import { DataContext, IDataContext } from '../../context/DataContext';
 import {
@@ -17,10 +17,6 @@ import {
 } from './ArmorSearchUtil';
 import { HIGH_RANK, LOW_RANK } from '../../typings/Shared';
 
-interface SkillMapping {
-  [id: string]: ISkill;
-}
-
 export const ArmorSearcher = (): ReactElement => {
   const { skills, armors } = useContext<IDataContext>(DataContext);
 
@@ -30,25 +26,29 @@ export const ArmorSearcher = (): ReactElement => {
   // const [waist, setWaist] = useState<IArmor | null>(null);
   // const [legs, setLegs] = useState<IArmor | null>(null);
 
-  const [skillMapping, setSkillMapping] = useState<SkillMapping>({});
+  const [skillArray, setSkillArray] = useState<ISkill[]>([]);
   const [skillRanks, setSkillRanks] = useState<ISkillRank[]>([]);
+  const [armorArray, setArmorArray] = useState<IArmor[]>([]);
 
   const [selectedSkillRanks, setSelectedSkillRanks] = useState<
     (ISkillRank | null)[]
   >([]);
 
   useEffect(() => {
-    const _skillMapping: SkillMapping = {};
+    const _skillArray: ISkill[] = Object.values(skills);
     const _skillRanks: ISkillRank[] = [];
 
-    skills.forEach((skill: ISkill) => {
-      _skillMapping[skill.id] = skill;
+    _skillArray.forEach((skill: ISkill) => {
       _skillRanks.push(...skill.ranks);
     });
 
-    setSkillMapping(_skillMapping);
+    setSkillArray(_skillArray);
     setSkillRanks(_skillRanks);
   }, [skills]);
+
+  useEffect(() => {
+    setArmorArray(Object.values(armors));
+  }, [armors]);
 
   // useEffect(() => {
   //   const selectedArmor: IArmor[] = [];
@@ -90,11 +90,11 @@ export const ArmorSearcher = (): ReactElement => {
 
     let time = new Date().getTime();
     const foundArmor = findArmor(
-      armors.filter(
+      armorArray.filter(
         (armor: IArmor) => armor.rank === LOW_RANK || armor.rank === HIGH_RANK
       ),
       _selectedSkillRanks.map(
-        (selectedSkillRank: ISkillRank) => skillMapping[selectedSkillRank.skill]
+        (selectedSkillRank: ISkillRank) => skills[selectedSkillRank.skill]
       )
     );
     console.log(`findArmor took ${new Date().getTime() - time} milliseconds`);
@@ -117,7 +117,7 @@ export const ArmorSearcher = (): ReactElement => {
         .filter((armor: IArmor) => armor.type === ARMOR_TYPE_LEGS)
         .sort(sortByBaseDefenseDescending),
       _selectedSkillRanks,
-      skills,
+      skillArray,
       100000000
     );
     console.log(

@@ -1,7 +1,8 @@
-import { ReactElement, useContext } from 'react';
+import { ReactElement, useContext, useEffect, useState } from 'react';
 import { DataContext, IDataContext } from '../../context/DataContext';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { GridInitialStateCommunity } from '@mui/x-data-grid/models/gridStateCommunity';
+import { IDecoration } from '../../typings/Decorations';
 
 const columns: GridColDef[] = [
   {
@@ -34,11 +35,17 @@ const initialState: GridInitialStateCommunity = {
 export const DecorationDataGrid = (): ReactElement => {
   const { decorations } = useContext<IDataContext>(DataContext);
 
+  const [decorationRows, setDecorationRows] = useState<IDecoration[]>([]);
+
+  useEffect(() => {
+    setDecorationRows(Object.values(decorations));
+  }, [decorations]);
+
   function render(): ReactElement {
     return (
       <DataGrid
         columns={columns}
-        rows={decorations}
+        rows={decorationRows}
         initialState={initialState}
         pageSizeOptions={[5, 10, 20, 50, 100]}
         disableRowSelectionOnClick

@@ -1,7 +1,8 @@
-import { ReactElement, useContext } from 'react';
+import { ReactElement, useContext, useEffect, useState } from 'react';
 import { DataContext, IDataContext } from '../../context/DataContext';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { GridInitialStateCommunity } from '@mui/x-data-grid/models/gridStateCommunity';
+import { IArmorSet } from '../../typings/ArmorSets';
 
 const columns: GridColDef[] = [
   {
@@ -35,11 +36,17 @@ const initialState: GridInitialStateCommunity = {
 export const ArmorSetDataGrid = (): ReactElement => {
   const { armorSets } = useContext<IDataContext>(DataContext);
 
+  const [armorSetRows, setArmorSetRows] = useState<IArmorSet[]>([]);
+
+  useEffect(() => {
+    setArmorSetRows(Object.values(armorSets));
+  }, [armorSets]);
+
   function render(): ReactElement {
     return (
       <DataGrid
         columns={columns}
-        rows={armorSets}
+        rows={armorSetRows}
         initialState={initialState}
         pageSizeOptions={[5, 10, 20, 50, 100]}
         disableRowSelectionOnClick

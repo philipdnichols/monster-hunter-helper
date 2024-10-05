@@ -1,4 +1,4 @@
-import { ReactElement, useContext } from 'react';
+import { ReactElement, useContext, useEffect, useState } from 'react';
 import { DataContext, IDataContext } from '../../context/DataContext';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { ISkill } from '../../typings/Skills';
@@ -42,11 +42,17 @@ const initialState: GridInitialStateCommunity = {
 export const SkillDataGrid = (): ReactElement => {
   const { skills } = useContext<IDataContext>(DataContext);
 
+  const [skillRows, setSkillRows] = useState<ISkill[]>([]);
+
+  useEffect(() => {
+    setSkillRows(Object.values(skills));
+  }, [skills]);
+
   function render(): ReactElement {
     return (
       <DataGrid
         columns={columns}
-        rows={skills}
+        rows={skillRows}
         initialState={initialState}
         pageSizeOptions={[5, 10, 20, 50, 100]}
         disableRowSelectionOnClick
