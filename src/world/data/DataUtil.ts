@@ -2,6 +2,8 @@ import {
   IArmorAttributesJson,
   IArmorJson,
   IArmorSetJson,
+  ICharmJson,
+  IDecorationJson,
   ISetInfoJson,
   ISkillJson,
 } from './mhw-db/Types';
@@ -21,6 +23,8 @@ import {
   TArmorRank,
   TArmorType,
 } from '../typings/Armor';
+import { ICharm } from '../typings/Charms';
+import { IDecoration } from '../typings/Decorations';
 
 export function parseSkillsJson(skillsJson: ISkillJson[]): ISkill[] {
   return skillsJson.map((skillJson: ISkillJson) => {
@@ -147,4 +151,26 @@ function parseGenderJson(genderJson: string | undefined): EGender | undefined {
 
 export function parseArmorsJson(armorsJson: IArmorJson[]): IArmor[] {
   return armorsJson.map(parseArmorJson);
+}
+
+export function parseCharmsJson(charmsJson: ICharmJson[]): ICharm[] {
+  return charmsJson.map(parseCharmJson);
+}
+
+function parseCharmJson(charmJson: ICharmJson): ICharm {
+  return {
+    ...charmJson,
+  };
+}
+
+export function parseDecorationsJson(
+  decorationsJson: IDecorationJson[]
+): IDecoration[] {
+  return decorationsJson.map(parseDecorationJson);
+}
+
+function parseDecorationJson(decorationJson: IDecorationJson): IDecoration {
+  return {
+    ...decorationJson,
+  };
 }
