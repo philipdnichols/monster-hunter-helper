@@ -2,49 +2,45 @@ import { IArmor } from '../../typings/Armor';
 import { ISkill, ISkillRank } from '../../typings/Skills';
 import { clamp } from 'lodash';
 import { ICharm, ICharmRank } from '../../typings/Charms';
-import {
-  DataContext,
-  IDataContext,
-  ISkillMapping,
-} from '../../context/DataContext';
+import { DataContext, IDataContext } from '../../context/DataContext';
 import { useContext } from 'react';
 
-export function calculateSkillRanks(
-  armor: IArmor[],
-  charm: ICharmRank,
-  allSkills: ISkillMapping
-) {
-  const skillRankLevels: { [skillId: string]: number } = {};
+export const useCalculateSkillRanks = () => {
+  const { skills } = useContext<IDataContext>(DataContext);
 
-  function addSkillRank(skillRank: ISkillRank) {
-    if (skillRankLevels[skillRank.skill] === undefined) {
-      skillRankLevels[skillRank.skill] = 0;
-    }
-    skillRankLevels[skillRank.skill] += skillRank.level;
-  }
+  return (armor: IArmor[], charm: ICharmRank) => {
+    const skillRankLevels: { [skillId: string]: number } = {};
 
-  armor.forEach((armor: IArmor) => armor.skills.forEach(addSkillRank));
-  charm.skills.forEach(addSkillRank);
-
-  const skillRanks: ISkillRank[] = [];
-  Object.entries(skillRankLevels).forEach(([skillId, level]) => {
-    const skill: ISkill | undefined = allSkills[Number(skillId)];
-
-    if (!skill) {
-      throw new Error(`Cannot determine skill with ID ${skillId}`);
+    function addSkillRank(skillRank: ISkillRank) {
+      if (skillRankLevels[skillRank.skill] === undefined) {
+        skillRankLevels[skillRank.skill] = 0;
+      }
+      skillRankLevels[skillRank.skill] += skillRank.level;
     }
 
-    skillRanks.push(skill.ranks[clamp(level - 1, 0, skill.ranks.length - 1)]);
-  });
+    armor.forEach((armor: IArmor) => armor.skills.forEach(addSkillRank));
+    charm.skills.forEach(addSkillRank);
 
-  skillRanks.sort(
-    (skillRank1: ISkillRank, skillRank2: ISkillRank) =>
-      // TODO this sorting can be better, needs to prioritize offensive skills first, showing the set bonuses first maybe, etc.
-      skillRank2.level - skillRank1.level
-  );
+    const skillRanks: ISkillRank[] = [];
+    Object.entries(skillRankLevels).forEach(([skillId, level]) => {
+      const skill: ISkill | undefined = skills[Number(skillId)];
 
-  return skillRanks;
-}
+      if (!skill) {
+        throw new Error(`Cannot determine skill with ID ${skillId}`);
+      }
+
+      skillRanks.push(skill.ranks[clamp(level - 1, 0, skill.ranks.length - 1)]);
+    });
+
+    // skillRanks.sort(
+    //   (skillRank1: ISkillRank, skillRank2: ISkillRank) =>
+    //     // TODO this sorting can be better, needs to prioritize offensive skills first, showing the set bonuses first maybe, etc.
+    //     skillRank2.level - skillRank1.level
+    // );
+
+    return skillRanks;
+  };
+};
 
 export function findArmor(
   availableArmor: IArmor[],
@@ -81,7 +77,7 @@ export function findCharms(
 }
 
 export const useFindArmorPossibilities = () => {
-  const { skills } = useContext<IDataContext>(DataContext);
+  // const calculateSkillRanks = useCalculateSkillRanks();
 
   return (
     headArmors: IArmor[],
@@ -92,9 +88,9 @@ export const useFindArmorPossibilities = () => {
     charmRanks: ICharmRank[],
     desiredSkillRanks: ISkillRank[],
     limit: number
-  ): IArmor[][] => {
+  ): { armor: IArmor[]; charm: ICharmRank }[] => {
     // TODO return charm
-    const armorSets: IArmor[][] = [];
+    const armorSets: { armor: IArmor[]; charm: ICharmRank }[] = [];
 
     // TODO possible optimization - build the set and add and remove skill ranks
     //  as the iteration happens?
@@ -107,30 +103,35 @@ export const useFindArmorPossibilities = () => {
           for (const waist of waistArmors) {
             for (const legs of legArmors) {
               for (const charm of charmRanks) {
-                const armorSet = [head, chest, gloves, waist, legs];
-                const skillRanks = calculateSkillRanks(armorSet, charm, skills);
-                const skillToRankLevelMapping: { [skillId: number]: number } =
-                  {};
-                skillRanks.forEach((skillRank: ISkillRank) => {
-                  skillToRankLevelMapping[skillRank.skill] = skillRank.level;
-                });
+                //const armorSet = [head, chest, gloves, waist, legs];
+                // const skillRanks = calculateSkillRanks(armorSet, charm);
+                // const skillToRankLevelMapping: { [skillId: number]: number } =
+                //   {};
+                // skillRanks.forEach((skillRank: ISkillRank) => {
+                //   skillToRankLevelMapping[skillRank.skill] = skillRank.level;
+                // });
 
                 let armorSetContainsDesiredSkills = true;
                 for (const desiredSkillRank of desiredSkillRanks) {
-                  const skillRankLevel: number | undefined =
-                    skillToRankLevelMapping[desiredSkillRank.skill];
+                  const skillRankLevel: number =
+                    (head.skillLevelsMap[desiredSkillRank.skill] || 0) +
+                    (chest.skillLevelsMap[desiredSkillRank.skill] || 0) +
+                    (gloves.skillLevelsMap[desiredSkillRank.skill] || 0) +
+                    (waist.skillLevelsMap[desiredSkillRank.skill] || 0) +
+                    (legs.skillLevelsMap[desiredSkillRank.skill] || 0) +
+                    (charm.skillLevelsMap[desiredSkillRank.skill] || 0);
 
-                  if (
-                    !skillRankLevel ||
-                    skillRankLevel < desiredSkillRank.level
-                  ) {
+                  if (skillRankLevel < desiredSkillRank.level) {
                     armorSetContainsDesiredSkills = false;
                     break;
                   }
                 }
 
                 if (armorSetContainsDesiredSkills) {
-                  armorSets.push(armorSet);
+                  armorSets.push({
+                    armor: [head, chest, gloves, waist, legs],
+                    charm,
+                  });
                 }
 
                 if (armorSets.length >= limit) {

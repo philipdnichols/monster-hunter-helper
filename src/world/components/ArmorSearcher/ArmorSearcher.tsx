@@ -14,10 +14,11 @@ import {
   findArmor,
   findCharms,
   sortByBaseDefenseDescending,
+  useCalculateSkillRanks,
   useFindArmorPossibilities,
 } from './ArmorSearchUtil';
 import { ICharm, ICharmRank } from '../../typings/Charms';
-import { HIGH_RANK, LOW_RANK } from '../../typings/Shared';
+import { MASTER_RANK } from '../../typings/Shared';
 
 export const ArmorSearcher = (): ReactElement => {
   const { skills, armors, charms } = useContext<IDataContext>(DataContext);
@@ -37,6 +38,7 @@ export const ArmorSearcher = (): ReactElement => {
   >([]);
 
   const findArmorPossibilities = useFindArmorPossibilities();
+  const calculateSkillRanks = useCalculateSkillRanks();
 
   useEffect(() => {
     const _skillRanks: ISkillRank[] = [];
@@ -100,7 +102,8 @@ export const ArmorSearcher = (): ReactElement => {
     let time = new Date().getTime();
     const foundArmor = findArmor(
       armorArray.filter(
-        (armor: IArmor) => armor.rank === LOW_RANK || armor.rank === HIGH_RANK
+        // (armor: IArmor) => armor.rank === LOW_RANK || armor.rank === HIGH_RANK
+        (armor: IArmor) => armor.rank === MASTER_RANK
       ),
       desiredSkills
     );
@@ -160,13 +163,21 @@ export const ArmorSearcher = (): ReactElement => {
     );
 
     console.log(`Found ${armorPossibilities.length} possibilities`);
-    // armorPossibilities.forEach((armorSet: IArmor[]) => {
-    //   const skillRanks = calculateSkillRanks(armorSet, skills);
-    //   console.log(`Armor Set: ${armorSet.map((armor: IArmor) => armor.name)}`);
-    //   console.log(
-    //     `Skills: ${skillRanks.map((skillRank: ISkillRank) => `${skillRank.skillName} Level ${skillRank.level}`)}`
-    //   );
-    // });
+    if (armorPossibilities.length !== 0) {
+      const skillRanks = calculateSkillRanks(
+        armorPossibilities[armorPossibilities.length - 1].armor,
+        armorPossibilities[armorPossibilities.length - 1].charm
+      );
+      console.log(
+        `Armor Set: ${armorPossibilities[armorPossibilities.length - 1].armor.map((armor: IArmor) => armor.name)}`
+      );
+      console.log(
+        `Charm: ${armorPossibilities[armorPossibilities.length - 1].charm.skills.map((skillRank: ISkillRank) => `${skillRank.skillName} Level ${skillRank.level}`)}`
+      );
+      console.log(
+        `Skills: ${skillRanks.map((skillRank: ISkillRank) => `${skillRank.skillName} Level ${skillRank.level}`)}`
+      );
+    }
   }
 
   function render(): ReactElement {

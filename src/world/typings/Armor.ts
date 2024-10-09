@@ -1,4 +1,11 @@
-import { HIGH_RANK, ISlot, LOW_RANK, MASTER_RANK, TRank } from './Shared';
+import {
+  HIGH_RANK,
+  ISkillLevelsMap,
+  ISlot,
+  LOW_RANK,
+  MASTER_RANK,
+  TRank,
+} from './Shared';
 import { ISkillRank } from './Skills';
 
 export const ARMOR_TYPE_HEAD = 'head';
@@ -58,6 +65,7 @@ export interface IArmor {
   resistances: IResistances;
   slots: ISlot[];
   skills: ISkillRank[];
+  skillLevelsMap: ISkillLevelsMap;
   armorSet: number | ISetInfo;
   // assets: TODO
   // crafting: TODO

@@ -28,3 +28,7 @@ export type TElementType =
   | typeof SLEEP
   | typeof PARALYSIS
   | typeof STUN;
+
+export interface ISkillLevelsMap {
+  [id: number]: number;
+}

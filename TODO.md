@@ -13,6 +13,8 @@
 
 Searcher:
 
+* searcher (and data) does not factor in full sets (pieces of armor that can only be equipped if every piece of armor in
+  the set is also equipped - e.g. Ryu's Armor)
 * optimize armors used to search by eliminating 100% worse options (as determined by skills, other factors could be
   different)
 * for the above note, make it so that the user can specify exactly what armors are allowed during the search (e.g. ASS)

@@ -3,13 +3,21 @@ import {
   IArmorJson,
   IArmorSetJson,
   ICharmJson,
+  ICharmRankJson,
   IDecorationJson,
   ISetInfoJson,
   ISkillJson,
+  ISkillRankJson,
 } from './mhw-db/Types';
 import { ISkill } from '../typings/Skills';
 import { IArmorSet } from '../typings/ArmorSets';
-import { HIGH_RANK, LOW_RANK, MASTER_RANK, TRank } from '../typings/Shared';
+import {
+  HIGH_RANK,
+  ISkillLevelsMap,
+  LOW_RANK,
+  MASTER_RANK,
+  TRank,
+} from '../typings/Shared';
 import {
   ARMOR_TYPE_CHEST,
   ARMOR_TYPE_GLOVES,
@@ -23,7 +31,7 @@ import {
   TArmorRank,
   TArmorType,
 } from '../typings/Armor';
-import { ICharm } from '../typings/Charms';
+import { ICharm, ICharmRank } from '../typings/Charms';
 import { IDecoration } from '../typings/Decorations';
 
 export function parseSkillsJson(skillsJson: ISkillJson[]): ISkill[] {
@@ -63,12 +71,15 @@ function parseRankJson(rankJson: string): TRank {
 }
 
 export function parseArmorJson(armorJson: IArmorJson): IArmor {
+  const skillLevelsMap = buildSkillLevelsMap(armorJson.skills);
+
   return {
     ...armorJson,
     type: parseArmorTypeJson(armorJson.type),
     rank: parseRankJson(armorJson.rank),
     armorSet: parseSetInfoJson(armorJson.armorSet),
     attributes: parseArmorAttributesJson(armorJson.attributes),
+    skillLevelsMap,
   };
 }
 
@@ -160,6 +171,18 @@ export function parseCharmsJson(charmsJson: ICharmJson[]): ICharm[] {
 function parseCharmJson(charmJson: ICharmJson): ICharm {
   return {
     ...charmJson,
+    ranks: charmJson.ranks.map((charmRankJson: ICharmRankJson) =>
+      parseCharmRankJson(charmRankJson)
+    ),
+  };
+}
+
+function parseCharmRankJson(charmRankJson: ICharmRankJson): ICharmRank {
+  const skillLevelsMap = buildSkillLevelsMap(charmRankJson.skills);
+
+  return {
+    ...charmRankJson,
+    skillLevelsMap,
   };
 }
 
@@ -173,4 +196,12 @@ function parseDecorationJson(decorationJson: IDecorationJson): IDecoration {
   return {
     ...decorationJson,
   };
+}
+
+function buildSkillLevelsMap(skills: ISkillRankJson[]): ISkillLevelsMap {
+  const skillLevelsMap: ISkillLevelsMap = {};
+  skills.forEach((skillRankJson: ISkillRankJson) => {
+    skillLevelsMap[skillRankJson.skill] = skillRankJson.level;
+  });
+  return skillLevelsMap;
 }
